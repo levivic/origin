@@ -6,7 +6,8 @@ STARTTIME=$(date +%s)
 OS_ROOT=$(dirname "${BASH_SOURCE}")/..
 source "${OS_ROOT}/hack/common.sh"
 
-GO_VERSION=($(go version))
+#GO_VERSION=($(go version))
+GO_VERSION=(go version go1.5.3 linux/s390x)
 echo "Detected go version: $(go version)"
 
 go get golang.org/x/tools/cmd/cover github.com/tools/godep golang.org/x/tools/cmd/vet

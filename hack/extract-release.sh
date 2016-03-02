@@ -13,13 +13,13 @@ source "${OS_ROOT}/hack/common.sh"
 # Go to the top of the tree.
 cd "${OS_ROOT}"
 
-# Copy the linux release archives release back to the local _output/local/bin/linux/amd64 directory.
+# Copy the linux release archives release back to the local _output/local/bin/linux/s390x directory.
 # TODO: support different OS's?
 os::build::detect_local_release_tars $(os::build::host_platform_friendly)
 
-mkdir -p "${OS_OUTPUT_BINPATH}/linux/amd64"
-tar mxzf "${OS_PRIMARY_RELEASE_TAR}" --strip-components=1 -C "${OS_OUTPUT_BINPATH}/linux/amd64"
-tar mxzf "${OS_CLIENT_RELEASE_TAR}" --strip-components=1 -C "${OS_OUTPUT_BINPATH}/linux/amd64"
-tar mxzf "${OS_IMAGE_RELEASE_TAR}" --strip-components=1 -C "${OS_OUTPUT_BINPATH}/linux/amd64"
+mkdir -p "${OS_OUTPUT_BINPATH}/linux/s390x"
+tar mxzf "${OS_PRIMARY_RELEASE_TAR}" --strip-components=1 -C "${OS_OUTPUT_BINPATH}/linux/s390x"
+tar mxzf "${OS_CLIENT_RELEASE_TAR}" --strip-components=1 -C "${OS_OUTPUT_BINPATH}/linux/s390x"
+tar mxzf "${OS_IMAGE_RELEASE_TAR}" --strip-components=1 -C "${OS_OUTPUT_BINPATH}/linux/s390x"
 
 os::build::make_openshift_binary_symlinks
