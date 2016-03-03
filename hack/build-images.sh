@@ -42,7 +42,7 @@ else
   fi
 
   # Extract the release achives to a staging area.
-  os::build::detect_local_release_tars "linux-64bit"
+  os::build::detect_local_release_tars "linux-64bit-s390x"
 
   echo "Building images from release tars for commit ${OS_RELEASE_COMMIT}:"
   echo " primary: $(basename ${OS_PRIMARY_RELEASE_TAR})"
