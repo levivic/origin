@@ -212,8 +212,8 @@ os::build::build_binaries() {
       fi
 
       for test in "${tests[@]:+${tests[@]}}"; do
-        mkdir -p "${GOBIN}/${platform}"
-        local outfile="${GOBIN}/${platform}/$(basename ${test})"
+        mkdir -p "${OS_OUTPUT_BINPATH}/${platform}"
+        local outfile="${OS_OUTPUT_BINPATH}/${platform}/$(basename ${test})"
         go test -c -o "${outfile}" \
           "${goflags[@]:+${goflags[@]}}" \
           -ldflags "${version_ldflags}" \
@@ -308,7 +308,7 @@ EOF
     fi
   fi
 
-  export GOBIN="${OS_OUTPUT_BINPATH}"
+  #export GOBIN="${OS_OUTPUT_BINPATH}"
   export GOPATH=${OS_ROOT}/Godeps/_workspace:${OS_GOPATH}
 }
 
