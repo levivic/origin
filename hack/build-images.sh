@@ -23,7 +23,7 @@ cd "${OS_ROOT}"
 
 if [[ "${OS_RELEASE:-}" == "n" ]]; then
   # Use local binaries
-  imagedir="${OS_OUTPUT_BINPATH}/linux/amd64"
+  imagedir="${OS_OUTPUT_BINPATH}/linux/s390x"
   # identical to build-cross.sh
   os::build::os_version_vars
   OS_RELEASE_COMMIT="${OS_GIT_SHORT_VERSION}"
