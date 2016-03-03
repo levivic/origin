@@ -139,11 +139,11 @@ os::build::host_platform_friendly() {
   elif [[ $platform == "darwin/amd64" ]]; then
     echo "mac"
   elif [[ $platform == "linux/386" ]]; then
-    echo "linux-32bit"
+    echo "linux-32bit-386"
   elif [[ $platform == "linux/amd64" ]]; then
-    echo "linux-64bit"
+    echo "linux-64bit-amd64"
   elif [[ $platform == "linux/s390x" ]]; then
-    echo "linux-64bit"
+    echo "linux-64bit-s390x"
   else
     echo "$(go env GOHOSTOS)-$(go env GOHOSTARCH)"
   fi
