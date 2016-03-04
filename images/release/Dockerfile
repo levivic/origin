@@ -6,6 +6,8 @@
 #
 FROM openshift/origin-base
 
+RUN yum install --nogpgcheck -y gcc-c++ gcc glibc-devel make curl
+
 ADD go/ /usr/local/go/
 ENV GOROOT /usr/local/go
 ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
