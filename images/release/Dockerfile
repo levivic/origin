@@ -6,8 +6,12 @@
 #
 FROM openshift/origin-base
 
-RUN yum install -y zip hg golang golang-pkg-darwin-amd64 golang-pkg-windows-amd64 golang-pkg-linux-386 && yum clean all
+RUN yum install --nogpgcheck -y gcc-c++ gcc glibc-devel make curl zip hg && yum clean all
 
+ADD go/ /usr/local/go/
+ENV GOROOT /usr/local/go
+ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
+ 
 ENV GOPATH /go
 
 # work around 64MB tmpfs size
@@ -24,8 +28,6 @@ WORKDIR /go/src/github.com/openshift/origin
 
 # (set an explicit GOARM of 5 for maximum compatibility)
 ENV GOARM 5
-ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
-
 ENV OS_VERSION_FILE /go/src/github.com/openshift/origin/os-version-defs
 
 # Allows building Origin sources mounted using volume
