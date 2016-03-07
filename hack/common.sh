@@ -613,7 +613,8 @@ os::build::ldflags() {
   ldflags+=($(os::build::ldflag "commitFromGit" "${OS_GIT_COMMIT}"))
 
   GO_VERSION=($(go version))
-  if [[ -z $(echo "${GO_VERSION[2]}" | grep -E 'go1.5') ]]; then
+  if [ -z $(echo "${GO_VERSION[2]}" | grep -E 'go1.5') ] && [ -z $(echo "${GO_VERSION[2]}" | grep -E 'go1.6') ]
+  then
     ldflags+=(-X "k8s.io/kubernetes/pkg/version.gitCommit" "${KUBE_GIT_COMMIT}")
     ldflags+=(-X "k8s.io/kubernetes/pkg/version.gitVersion" "${KUBE_GIT_VERSION}")
   else
