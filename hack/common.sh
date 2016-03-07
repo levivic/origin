@@ -587,7 +587,8 @@ os::build::ldflag() {
 
   GO_VERSION=($(go version))
 
-  if [[ -z $(echo "${GO_VERSION[2]}" | grep -E 'go1.5') ]]; then
+  if [[ -z $(echo "${GO_VERSION[2]}" | grep -E 'go1.5') ]] && [ -z $(echo "${GO_VERSION[2]}" | grep -E 'go1.6') ]
+  then
     echo "-X ${OS_GO_PACKAGE}/pkg/version.${key} ${val}"
   else
     echo "-X ${OS_GO_PACKAGE}/pkg/version.${key}=${val}"
