@@ -28,7 +28,7 @@ readonly OS_GOPATH=$(
 )
 
 readonly OS_IMAGE_COMPILE_PLATFORMS=(
-  linux/amd64
+  linux/s390x
 )
 readonly OS_IMAGE_COMPILE_TARGETS=(
   images/pod
@@ -47,6 +47,7 @@ readonly OS_CROSS_COMPILE_PLATFORMS=(
   darwin/amd64
   windows/amd64
   linux/386
+  linux/s390x
 )
 readonly OS_CROSS_COMPILE_TARGETS=(
   cmd/openshift
@@ -138,9 +139,11 @@ os::build::host_platform_friendly() {
   elif [[ $platform == "darwin/amd64" ]]; then
     echo "mac"
   elif [[ $platform == "linux/386" ]]; then
-    echo "linux-32bit"
+    echo "linux-386"
   elif [[ $platform == "linux/amd64" ]]; then
-    echo "linux-64bit"
+    echo "linux-amd64"
+  elif [[ $platform == "linux/s390x" ]]; then
+    echo "linux-s390x"
   else
     echo "$(go env GOHOSTOS)-$(go env GOHOSTARCH)"
   fi
@@ -209,8 +212,8 @@ os::build::build_binaries() {
       fi
 
       for test in "${tests[@]:+${tests[@]}}"; do
-        mkdir -p "${GOBIN}/${platform}"
-        local outfile="${GOBIN}/${platform}/$(basename ${test})"
+        mkdir -p "${OS_OUTPUT_BINPATH}/${platform}"
+        local outfile="${OS_OUTPUT_BINPATH}/${platform}/$(basename ${test})"
         go test -c -o "${outfile}" \
           "${goflags[@]:+${goflags[@]}}" \
           -ldflags "${version_ldflags}" \
@@ -303,7 +306,6 @@ EOF
     fi
   fi
 
-  export GOBIN="${OS_OUTPUT_BINPATH}"
   export GOPATH=${OS_ROOT}/Godeps/_workspace:${OS_GOPATH}
 }
 
@@ -408,14 +410,16 @@ os::build::place_bins() {
         elif [[ $platform == "linux/386" ]]; then
           platform="linux/32bit" OS_RELEASE_ARCHIVE="openshift-origin-client-tools" os::build::archive_tar "${OS_BINARY_RELEASE_CLIENT_LINUX[@]}"
         elif [[ $platform == "linux/amd64" ]]; then
-          platform="linux/64bit" OS_RELEASE_ARCHIVE="openshift-origin-client-tools" os::build::archive_tar "${OS_BINARY_RELEASE_CLIENT_LINUX[@]}"
-          platform="linux/64bit" OS_RELEASE_ARCHIVE="openshift-origin-server" os::build::archive_tar "${OS_BINARY_RELEASE_SERVER_LINUX[@]}"
+          platform="linux/amd64" OS_RELEASE_ARCHIVE="openshift-origin-client-tools" os::build::archive_tar "${OS_BINARY_RELEASE_CLIENT_LINUX[@]}"
+        elif [[ $platform == "linux/s390x" ]]; then
+          platform="linux/s390x" OS_RELEASE_ARCHIVE="openshift-origin-client-tools" os::build::archive_tar "${OS_BINARY_RELEASE_CLIENT_LINUX[@]}"
+          platform="linux/s390x" OS_RELEASE_ARCHIVE="openshift-origin-server" os::build::archive_tar "${OS_BINARY_RELEASE_SERVER_LINUX[@]}"
         else
           echo "++ ERROR: No release type defined for $platform"
         fi
       else
-        if [[ $platform == "linux/amd64" ]]; then
-          platform="linux/64bit" os::build::archive_tar "./*"
+        if [[ $platform == "linux/s390x" ]]; then
+          platform="linux/s390x" os::build::archive_tar "./*"
         else
           echo "++ ERROR: No release type defined for $platform"
         fi
