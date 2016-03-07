@@ -607,13 +607,12 @@ os::build::ldflags() {
 
   declare -a ldflags=()
 
-  ldflags+=($(os::build::ldflag "majorFromGit" "${OS_GIT_MAJOR}"))
-  ldflags+=($(os::build::ldflag "minorFromGit" "${OS_GIT_MINOR}"))
-  ldflags+=($(os::build::ldflag "versionFromGit" "${OS_GIT_VERSION}"))
-  ldflags+=($(os::build::ldflag "commitFromGit" "${OS_GIT_COMMIT}"))
+  ldflags+=($(os::build::ldflag "majorFromGit=${OS_GIT_MAJOR}"))
+  ldflags+=($(os::build::ldflag "minorFromGit=${OS_GIT_MINOR}"))
+  ldflags+=($(os::build::ldflag "versionFromGit=${OS_GIT_VERSION}"))
+  ldflags+=($(os::build::ldflag "commitFromGit=${OS_GIT_COMMIT}"))
 
   GO_VERSION=($(go version))
-  echo "lalala  ${GO_VERSION[2]}"
   if [ -z $(echo "${GO_VERSION[2]}" | grep -E 'go1.5') ] && [ -z $(echo "${GO_VERSION[2]}" | grep -E 'go1.6') ]
   then
     ldflags+=(-X "k8s.io/kubernetes/pkg/version.gitCommit" "${KUBE_GIT_COMMIT}")
