@@ -12,7 +12,7 @@ ADD go/ /usr/local/go/
 ENV GOROOT /usr/local/go
 ENV PATH $PATH:/usr/local/go/bin/
  
-#ENV GOPATH /go
+ENV GOPATH /go
 
 # work around 64MB tmpfs size
 ENV TMPDIR /openshifttmp
