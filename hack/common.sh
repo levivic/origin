@@ -325,7 +325,7 @@ os::build::place_bins() {
     local host_platform
     host_platform=$(os::build::host_platform)
 
-    echo "++ Placing binaries"
+    echo "++ Placing binaries ---lala"
 
     if [[ "${OS_RELEASE_ARCHIVE-}" != "" ]]; then
       os::build::get_version_vars
@@ -344,6 +344,7 @@ os::build::place_bins() {
       # Skip this directory if the platform has no binaries.
       local full_binpath_src="${OS_OUTPUT_BINPATH}${platform_src}"
       if [[ ! -d "${full_binpath_src}" ]]; then
+        echo "Skip this directory if the platform has no binaries."
         continue
       fi
 
@@ -364,6 +365,7 @@ os::build::place_bins() {
       for binary in "${binaries[@]}"; do
         path="${full_binpath_src}/${binary}"
         if [[ -f "${path}" ]]; then
+	  echo "Move from ${path} to ${OS_OUTPUT_BINPATH}/${platform}/"
           mv "${path}" "${OS_OUTPUT_BINPATH}/${platform}/"
         fi
       done
@@ -376,6 +378,7 @@ os::build::place_bins() {
       # Create a temporary bin directory containing only the binaries marked for release.
       local release_binpath=$(mktemp -d openshift.release.${OS_RELEASE_ARCHIVE}.XXX)
       for binary in "${binaries[@]}"; do
+        echo "Copy ${OS_OUTPUT_BINPATH}/${platform}/${binary} to ${release_binpath}/"
         cp "${OS_OUTPUT_BINPATH}/${platform}/${binary}" "${release_binpath}/"
       done
 
@@ -387,12 +390,14 @@ os::build::place_bins() {
       for linkname in "${OPENSHIFT_BINARY_COPY[@]}"; do
         local src="${release_binpath}/openshift${suffix}"
         if [[ -f "${src}" ]]; then
+	  echo "Linke ${release_binpath}/openshift${suffix} to ${release_binpath}/${linkname}${suffix}"
           ln "${release_binpath}/openshift${suffix}" "${release_binpath}/${linkname}${suffix}"
         fi
       done
       for linkname in "${OC_BINARY_COPY[@]}"; do
         local src="${release_binpath}/oc${suffix}"
         if [[ -f "${src}" ]]; then
+	  echo "Link ${release_binpath}/oc${suffix} to ${release_binpath}/${linkname}${suffix}"
           ln "${release_binpath}/oc${suffix}" "${release_binpath}/${linkname}${suffix}"
         fi
       done
@@ -401,6 +406,7 @@ os::build::place_bins() {
       local platform_segment="${platform//\//-}"
       if [[ ${OS_RELEASE_ARCHIVE} == "openshift-origin" ]]; then
         for file in "${OS_BINARY_RELEASE_CLIENT_EXTRA[@]}"; do
+	  echo "Copy file ${file} to ${release_binpath}/"
           cp "${file}" "${release_binpath}/"
         done
         if [[ $platform == "windows/amd64" ]]; then
