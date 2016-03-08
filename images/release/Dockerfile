@@ -9,10 +9,10 @@ FROM openshift/origin-base
 RUN yum install --nogpgcheck -y gcc-c++ gcc glibc-devel make curl zip hg && yum clean all
 
 ADD go/ /usr/local/go/
-ENV GOROOT /usr/local/go
+#ENV GOROOT /usr/local/go
 ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
  
-ENV GOPATH /go
+#ENV GOPATH /go
 
 # work around 64MB tmpfs size
 ENV TMPDIR /openshifttmp
