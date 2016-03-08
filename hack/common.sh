@@ -344,7 +344,7 @@ os::build::place_bins() {
       # Skip this directory if the platform has no binaries.
       local full_binpath_src="${OS_OUTPUT_BINPATH}${platform_src}"
       if [[ ! -d "${full_binpath_src}" ]]; then
-        echo "Skip this directory if the platform has no binaries. No directory: ${full_binpath_src}"
+        echo "Skip this directory if the platform has no binaries."
         continue
       fi
 
