@@ -20,7 +20,8 @@ else
   echo "$buildout" | sed 's/^/   /'
 fi
 
-genconversion="$(os::build::find-binary genconversion)"
+#genconversion="$(os::build::find-binary genconversion)"
+genconversion=/lzh/bin
 
 echo "   Verifying genconversion binary..."
 if [[ ! -x "$genconversion" ]]; then
