@@ -1,0 +1,669 @@
+TEST_KUBE=1 hack/test-go.sh   
+ok  	github.com/openshift/origin/examples	0.131s
+ok  	github.com/openshift/origin/pkg/api	2.346s
+ok  	github.com/openshift/origin/pkg/api/graph	0.015s
+ok  	github.com/openshift/origin/pkg/api/graph/graphview	0.068s
+ok  	github.com/openshift/origin/pkg/api/kubegraph	0.016s
+ok  	github.com/openshift/origin/pkg/api/kubegraph/analysis	0.131s
+ok  	github.com/openshift/origin/pkg/api/kubegraph/nodes	0.021s
+ok  	github.com/openshift/origin/pkg/api/latest	0.014s
+ok  	github.com/openshift/origin/pkg/api/validation	0.182s
+ok  	github.com/openshift/origin/pkg/assets	0.183s
+ok  	github.com/openshift/origin/pkg/auth/authenticator/anonymous	0.018s
+ok  	github.com/openshift/origin/pkg/auth/authenticator/challenger/passwordchallenger	0.012s
+ok  	github.com/openshift/origin/pkg/auth/authenticator/password/basicauthpassword	0.004s
+ok  	github.com/openshift/origin/pkg/auth/authenticator/password/htpasswd	0.752s
+ok  	github.com/openshift/origin/pkg/auth/authenticator/password/keystonepassword	0.061s
+ok  	github.com/openshift/origin/pkg/auth/authenticator/request/basicauthrequest	0.015s
+ok  	github.com/openshift/origin/pkg/auth/authenticator/request/bearertoken	0.007s
+ok  	github.com/openshift/origin/pkg/auth/authenticator/request/headerrequest	0.016s
+ok  	github.com/openshift/origin/pkg/auth/authenticator/request/unionrequest	0.006s
+ok  	github.com/openshift/origin/pkg/auth/authenticator/request/x509request	0.018s
+ok  	github.com/openshift/origin/pkg/auth/authenticator/token/cache	0.011s
+ok  	github.com/openshift/origin/pkg/auth/group	0.045s
+ok  	github.com/openshift/origin/pkg/auth/ldaputil	0.041s
+ok  	github.com/openshift/origin/pkg/auth/oauth/external	0.083s
+ok  	github.com/openshift/origin/pkg/auth/oauth/external/github	0.007s
+ok  	github.com/openshift/origin/pkg/auth/oauth/external/gitlab	0.026s
+ok  	github.com/openshift/origin/pkg/auth/oauth/external/google	0.040s
+ok  	github.com/openshift/origin/pkg/auth/oauth/external/openid	0.015s
+ok  	github.com/openshift/origin/pkg/auth/oauth/handlers	0.017s
+ok  	github.com/openshift/origin/pkg/auth/oauth/registry	0.024s
+ok  	github.com/openshift/origin/pkg/authorization/api	0.030s
+ok  	github.com/openshift/origin/pkg/authorization/api/v1	0.033s
+ok  	github.com/openshift/origin/pkg/authorization/api/validation	0.014s
+ok  	github.com/openshift/origin/pkg/authorization/authorizer	0.269s
+ok  	github.com/openshift/origin/pkg/authorization/authorizer/adapter	0.062s
+ok  	github.com/openshift/origin/pkg/authorization/authorizer/cache	0.023s
+ok  	github.com/openshift/origin/pkg/authorization/authorizer/remote	0.016s
+ok  	github.com/openshift/origin/pkg/authorization/cache	0.076s
+ok  	github.com/openshift/origin/pkg/authorization/reaper	0.029s
+ok  	github.com/openshift/origin/pkg/authorization/registry/clusterrole	0.016s
+ok  	github.com/openshift/origin/pkg/authorization/registry/clusterrolebinding	0.066s
+ok  	github.com/openshift/origin/pkg/authorization/registry/localresourceaccessreview	0.083s
+ok  	github.com/openshift/origin/pkg/authorization/registry/localsubjectaccessreview	0.061s
+ok  	github.com/openshift/origin/pkg/authorization/registry/resourceaccessreview	0.012s
+ok  	github.com/openshift/origin/pkg/authorization/registry/rolebinding/policybased	0.055s
+ok  	github.com/openshift/origin/pkg/authorization/registry/role/policybased	0.020s
+ok  	github.com/openshift/origin/pkg/authorization/registry/subjectaccessreview	0.039s
+ok  	github.com/openshift/origin/pkg/authorization/rulevalidation	0.033s
+ok  	github.com/openshift/origin/pkg/auth/server/csrf	0.055s
+ok  	github.com/openshift/origin/pkg/auth/server/errorpage	0.130s
+ok  	github.com/openshift/origin/pkg/auth/server/grant	0.083s
+ok  	github.com/openshift/origin/pkg/auth/server/login	0.164s
+ok  	github.com/openshift/origin/pkg/auth/server/selectprovider	0.240s
+ok  	github.com/openshift/origin/pkg/auth/userregistry/identitymapper	0.015s
+ok  	github.com/openshift/origin/pkg/build/admission	0.142s
+ok  	github.com/openshift/origin/pkg/build/admission/defaults	0.093s
+ok  	github.com/openshift/origin/pkg/build/admission/defaults/api/validation	0.016s
+ok  	github.com/openshift/origin/pkg/build/admission/overrides	0.198s
+ok  	github.com/openshift/origin/pkg/build/admission/strategyrestrictions	0.048s
+ok  	github.com/openshift/origin/pkg/build/api	0.034s
+ok  	github.com/openshift/origin/pkg/build/api/v1	0.021s
+ok  	github.com/openshift/origin/pkg/build/api/v1beta3	0.021s
+ok  	github.com/openshift/origin/pkg/build/api/validation	0.051s
+ok  	github.com/openshift/origin/pkg/build/builder	4.949s
+ok  	github.com/openshift/origin/pkg/build/builder/cmd/dockercfg	0.024s
+ok  	github.com/openshift/origin/pkg/build/builder/cmd/scmauth	0.040s
+ok  	github.com/openshift/origin/pkg/build/controller	0.037s
+ok  	github.com/openshift/origin/pkg/build/controller/factory	0.013s
+ok  	github.com/openshift/origin/pkg/build/controller/strategy	0.036s
+ok  	github.com/openshift/origin/pkg/build/generator	0.043s
+ok  	github.com/openshift/origin/pkg/build/graph	0.036s
+ok  	github.com/openshift/origin/pkg/build/graph/analysis	0.042s
+ok  	github.com/openshift/origin/pkg/build/prune	2.943s
+ok  	github.com/openshift/origin/pkg/build/reaper	0.029s
+ok  	github.com/openshift/origin/pkg/build/registry/build	0.041s
+ok  	github.com/openshift/origin/pkg/build/registry/buildclone	0.016s
+ok  	github.com/openshift/origin/pkg/build/registry/buildconfig	0.012s
+ok  	github.com/openshift/origin/pkg/build/registry/buildconfig/etcd	5.880s
+ok  	github.com/openshift/origin/pkg/build/registry/buildconfiginstantiate	0.038s
+ok  	github.com/openshift/origin/pkg/build/registry/build/etcd	6.000s
+ok  	github.com/openshift/origin/pkg/build/registry/buildlog	0.149s
+ok  	github.com/openshift/origin/pkg/build/util	0.020s
+ok  	github.com/openshift/origin/pkg/build/webhook	0.014s
+ok  	github.com/openshift/origin/pkg/build/webhook/generic	0.037s
+ok  	github.com/openshift/origin/pkg/build/webhook/github	0.096s
+ok  	github.com/openshift/origin/pkg/client	0.053s
+ok  	github.com/openshift/origin/pkg/client/cache	0.168s
+ok  	github.com/openshift/origin/pkg/client/testclient	0.016s
+ok  	github.com/openshift/origin/pkg/cmd/admin/groups/sync	0.018s
+ok  	github.com/openshift/origin/pkg/cmd/admin/groups/sync/ad	0.025s
+ok  	github.com/openshift/origin/pkg/cmd/admin/groups/sync/groupdetector	0.030s
+ok  	github.com/openshift/origin/pkg/cmd/admin/groups/sync/rfc2307	0.020s
+ok  	github.com/openshift/origin/pkg/cmd/admin/groups/sync/syncerror	0.026s
+ok  	github.com/openshift/origin/pkg/cmd/admin/node	0.035s
+ok  	github.com/openshift/origin/pkg/cmd/admin/policy	0.038s
+ok  	github.com/openshift/origin/pkg/cmd/cli	0.086s
+ok  	github.com/openshift/origin/pkg/cmd/cli/cmd	0.230s
+ok  	github.com/openshift/origin/pkg/cmd/cli/cmd/rsync	0.163s
+ok  	github.com/openshift/origin/pkg/cmd/cli/describe	0.182s
+ok  	github.com/openshift/origin/pkg/cmd/cli/secrets	0.018s
+ok  	github.com/openshift/origin/pkg/cmd/flagtypes	0.038s
+ok  	github.com/openshift/origin/pkg/cmd/infra/deployer	0.080s
+ok  	github.com/openshift/origin/pkg/cmd/openshift	0.204s
+ok  	github.com/openshift/origin/pkg/cmd/recycle	0.082s
+ok  	github.com/openshift/origin/pkg/cmd/server/admin	5.505s
+ok  	github.com/openshift/origin/pkg/cmd/server/api	0.510s
+ok  	github.com/openshift/origin/pkg/cmd/server/api/v1	0.085s
+ok  	github.com/openshift/origin/pkg/cmd/server/api/validation	0.127s
+ok  	github.com/openshift/origin/pkg/cmd/server/bootstrappolicy	0.230s
+ok  	github.com/openshift/origin/pkg/cmd/server/crypto	3.912s
+ok  	github.com/openshift/origin/pkg/cmd/server/kubernetes	0.062s
+ok  	github.com/openshift/origin/pkg/cmd/server/origin	0.232s
+ok  	github.com/openshift/origin/pkg/cmd/server/start	0.228s
+ok  	github.com/openshift/origin/pkg/cmd/util	0.110s
+ok  	github.com/openshift/origin/pkg/cmd/util/clientcmd	0.071s
+ok  	github.com/openshift/origin/pkg/cmd/util/docker	0.013s
+ok  	github.com/openshift/origin/pkg/cmd/util/pluginconfig	0.223s
+ok  	github.com/openshift/origin/pkg/cmd/util/tokencmd	0.013s
+ok  	github.com/openshift/origin/pkg/controller	0.045s
+ok  	github.com/openshift/origin/pkg/deploy/api	0.048s
+ok  	github.com/openshift/origin/pkg/deploy/api/v1	0.028s
+ok  	github.com/openshift/origin/pkg/deploy/api/v1beta3	0.079s
+ok  	github.com/openshift/origin/pkg/deploy/api/validation	0.015s
+ok  	github.com/openshift/origin/pkg/deploy/controller/configchange	0.015s
+ok  	github.com/openshift/origin/pkg/deploy/controller/deployerpod	0.120s
+ok  	github.com/openshift/origin/pkg/deploy/controller/deployment	0.059s
+ok  	github.com/openshift/origin/pkg/deploy/controller/deploymentconfig	0.114s
+ok  	github.com/openshift/origin/pkg/deploy/controller/imagechange	0.053s
+ok  	github.com/openshift/origin/pkg/deploy/generator	0.015s
+ok  	github.com/openshift/origin/pkg/deploy/graph	0.059s
+ok  	github.com/openshift/origin/pkg/deploy/graph/analysis	0.145s
+ok  	github.com/openshift/origin/pkg/deploy/graph/nodes	0.013s
+ok  	github.com/openshift/origin/pkg/deploy/prune	4.435s
+ok  	github.com/openshift/origin/pkg/deploy/reaper	14.095s
+ok  	github.com/openshift/origin/pkg/deploy/registry/deployconfig	0.027s
+ok  	github.com/openshift/origin/pkg/deploy/registry/deployconfig/etcd	4.975s
+ok  	github.com/openshift/origin/pkg/deploy/registry/deploylog	0.047s
+ok  	github.com/openshift/origin/pkg/deploy/registry/rollback	0.053s
+ok  	github.com/openshift/origin/pkg/deploy/scaler	0.048s
+ok  	github.com/openshift/origin/pkg/deploy/strategy/recreate	0.032s
+ok  	github.com/openshift/origin/pkg/deploy/strategy/rolling	0.127s
+ok  	github.com/openshift/origin/pkg/deploy/strategy/support	0.109s
+ok  	github.com/openshift/origin/pkg/deploy/util	0.052s
+ok  	github.com/openshift/origin/pkg/diagnostics/cluster	0.042s
+ok  	github.com/openshift/origin/pkg/dockerregistry	0.055s
+ok  	github.com/openshift/origin/pkg/dockerregistry/server	0.108s
+ok  	github.com/openshift/origin/pkg/generate/app	0.263s
+ok  	github.com/openshift/origin/pkg/generate/app/cmd	0.031s
+ok  	github.com/openshift/origin/pkg/generate/dockerfile	0.017s
+ok  	github.com/openshift/origin/pkg/generate/git	0.032s
+ok  	github.com/openshift/origin/pkg/generate/source	0.006s
+ok  	github.com/openshift/origin/pkg/image/api	0.058s
+ok  	github.com/openshift/origin/pkg/image/api/v1	0.090s
+ok  	github.com/openshift/origin/pkg/image/api/v1beta3	0.100s
+ok  	github.com/openshift/origin/pkg/image/api/validation	0.027s
+ok  	github.com/openshift/origin/pkg/image/controller	0.035s
+ok  	github.com/openshift/origin/pkg/image/importer	0.102s
+ok  	github.com/openshift/origin/pkg/image/prune	0.078s
+ok  	github.com/openshift/origin/pkg/image/registry/image/etcd	8.258s
+ok  	github.com/openshift/origin/pkg/image/registry/imagesecret	0.090s
+ok  	github.com/openshift/origin/pkg/image/registry/imagestream	0.305s
+ok  	github.com/openshift/origin/pkg/image/registry/imagestream/etcd	1.960s
+ok  	github.com/openshift/origin/pkg/image/registry/imagestreamimage	4.688s
+ok  	github.com/openshift/origin/pkg/image/registry/imagestreammapping	3.524s
+ok  	github.com/openshift/origin/pkg/image/registry/imagestreamtag	4.128s
+ok  	github.com/openshift/origin/pkg/ipfailover	0.054s
+ok  	github.com/openshift/origin/pkg/ipfailover/keepalived	0.028s
+ok  	github.com/openshift/origin/pkg/oauth/api/v1	0.027s
+ok  	github.com/openshift/origin/pkg/oauth/api/validation	0.059s
+ok  	github.com/openshift/origin/pkg/oauth/scope	0.022s
+ok  	github.com/openshift/origin/pkg/oauth/server/osinserver	0.080s
+ok  	github.com/openshift/origin/pkg/oauth/server/osinserver/registrystorage	0.100s
+ok  	github.com/openshift/origin/pkg/project/admission/lifecycle	0.172s
+ok  	github.com/openshift/origin/pkg/project/admission/nodeenv	0.017s
+ok  	github.com/openshift/origin/pkg/project/admission/requestlimit	0.033s
+ok  	github.com/openshift/origin/pkg/project/admission/requestlimit/api/validation	0.017s
+ok  	github.com/openshift/origin/pkg/project/api/v1	0.035s
+ok  	github.com/openshift/origin/pkg/project/api/validation	0.041s
+ok  	github.com/openshift/origin/pkg/project/auth	0.126s
+ok  	github.com/openshift/origin/pkg/project/controller	0.075s
+ok  	github.com/openshift/origin/pkg/project/registry/project	0.010s
+ok  	github.com/openshift/origin/pkg/project/registry/project/proxy	0.116s
+ok  	github.com/openshift/origin/pkg/project/registry/projectrequest/delegated	0.083s
+ok  	github.com/openshift/origin/pkg/quota/admission/clusterresourceoverride	0.260s
+ok  	github.com/openshift/origin/pkg/quota/admission/runonceduration	0.030s
+ok  	github.com/openshift/origin/pkg/quota/admission/runonceduration/api/validation	0.011s
+ok  	github.com/openshift/origin/pkg/route/api/v1	0.154s
+ok  	github.com/openshift/origin/pkg/route/api/validation	0.098s
+ok  	github.com/openshift/origin/pkg/route/controller/allocation	0.112s
+ok  	github.com/openshift/origin/pkg/route/generator	0.103s
+ok  	github.com/openshift/origin/pkg/route/graph/analysis	0.035s
+ok  	github.com/openshift/origin/pkg/router/controller	0.027s
+ok  	github.com/openshift/origin/pkg/route/registry/route/etcd	5.039s
+ok  	github.com/openshift/origin/pkg/sdn/api/v1	0.029s
+ok  	github.com/openshift/origin/pkg/sdn/api/validation	0.035s
+ok  	github.com/openshift/origin/pkg/security/admission	0.027s
+ok  	github.com/openshift/origin/pkg/security/controller	0.046s
+ok  	github.com/openshift/origin/pkg/security/mcs	0.009s
+ok  	github.com/openshift/origin/pkg/security/mcsallocator	0.049s
+ok  	github.com/openshift/origin/pkg/security/uid	0.042s
+ok  	github.com/openshift/origin/pkg/security/uidallocator	0.251s
+ok  	github.com/openshift/origin/pkg/service	0.173s
+ok  	github.com/openshift/origin/pkg/serviceaccounts/controllers	0.060s
+ok  	github.com/openshift/origin/pkg/template	0.136s
+ok  	github.com/openshift/origin/pkg/template/api/v1	0.055s
+ok  	github.com/openshift/origin/pkg/template/api/validation	0.041s
+ok  	github.com/openshift/origin/pkg/template/generator	0.008s
+ok  	github.com/openshift/origin/pkg/template/generator/examples	0.332s
+ok  	github.com/openshift/origin/pkg/template/registry	0.040s
+ok  	github.com/openshift/origin/pkg/template/registry/etcd	4.360s
+ok  	github.com/openshift/origin/pkg/user	0.019s
+ok  	github.com/openshift/origin/pkg/user/api/v1	0.073s
+ok  	github.com/openshift/origin/pkg/user/api/validation	0.017s
+ok  	github.com/openshift/origin/pkg/user/reaper	0.084s
+ok  	github.com/openshift/origin/pkg/user/registry/useridentitymapping	0.045s
+ok  	github.com/openshift/origin/pkg/util	0.055s
+ok  	github.com/openshift/origin/pkg/util/docker/dockerfile	0.004s
+ok  	github.com/openshift/origin/pkg/util/http/links	0.030s
+ok  	github.com/openshift/origin/pkg/util/jsonmerge	0.032s
+ok  	github.com/openshift/origin/pkg/util/labelselector	0.026s
+ok  	github.com/openshift/origin/pkg/util/namer	0.014s
+ok  	github.com/openshift/origin/pkg/util/parallel	0.033s
+ok  	github.com/openshift/origin/pkg/util/ratelimiter	14.100s
+ok  	github.com/openshift/origin/pkg/util/stringreplace	0.024s
+ok  	github.com/openshift/origin/plugins/route/allocation/simple	0.030s
+W0311 14:05:37.772884   51833 f5.go:243] Strict certificate verification is *DISABLED*
+E0311 14:05:37.774101   51833 f5.go:700] partition path "/Common" error: Encountered an error on GET request to URL https://127.0.0.1:58176/mgmt/tm/sys/folder/~Common: error: client.Do failed: Get https://127.0.0.1:58176/mgmt/tm/sys/folder/~Common: read tcp 127.0.0.1:50794->127.0.0.1:58176: read: connection reset by peer
+--- FAIL: TestInitializeF5Plugin (0.00s)
+	plugin_test.go:1265: Failed to initialize test router: Failed to create new F5 router: Encountered an error on GET request to URL https://127.0.0.1:58176/mgmt/tm/sys/folder/~Common: error: client.Do failed: Get https://127.0.0.1:58176/mgmt/tm/sys/folder/~Common: read tcp 127.0.0.1:50794->127.0.0.1:58176: read: connection reset by peer
+W0311 14:05:37.776675   51833 f5.go:243] Strict certificate verification is *DISABLED*
+E0311 14:05:37.812672   51833 f5.go:700] partition path "/Common" error: Encountered an error on GET request to URL https://127.0.0.1:56685/mgmt/tm/sys/folder/~Common: error: client.Do failed: Get https://127.0.0.1:56685/mgmt/tm/sys/folder/~Common: dial tcp 127.0.0.1:56685: getsockopt: connection refused
+--- FAIL: TestF5RouterPartition (0.04s)
+panic: runtime error: invalid memory address or nil pointer dereference [recovered]
+	panic: runtime error: invalid memory address or nil pointer dereference
+[signal 0xb code=0x1 addr=0x0 pc=0x800b96d6]
+
+goroutine 8 [running]:
+panic(0x80c1b300, 0xc82000e160)
+	/sandbox/lei/go1.6/src/runtime/panic.go:464 +0x402
+testing.tRunner.func1(0xc820094360)
+	/sandbox/lei/go1.6/src/testing/testing.go:467 +0x1a6
+panic(0x80c1b300, 0xc82000e160)
+	/sandbox/lei/go1.6/src/runtime/panic.go:426 +0x53c
+github.com/openshift/origin/plugins/router/f5.(*mockF5).close(0x0)
+	/lzh/go/src/github.com/openshift/origin/plugins/router/f5/plugin_test.go:261 +0x1e
+github.com/openshift/origin/plugins/router/f5.TestF5RouterPartition(0xc820094360)
+	/lzh/go/src/github.com/openshift/origin/plugins/router/f5/plugin_test.go:1408 +0x116
+testing.tRunner(0xc820094360, 0x813dfcf8)
+	/sandbox/lei/go1.6/src/testing/testing.go:473 +0xe2
+created by testing.RunTests
+	/sandbox/lei/go1.6/src/testing/testing.go:582 +0x6be
+FAIL	github.com/openshift/origin/plugins/router/f5	0.094s
+ok  	github.com/openshift/origin/plugins/router/template	0.061s
+ok  	github.com/openshift/origin/test/integration	0.012s
+ok  	github.com/openshift/origin/tools/junitreport/pkg/builder/flat	0.072s
+ok  	github.com/openshift/origin/tools/junitreport/pkg/builder/nested	0.012s
+ok  	github.com/openshift/origin/tools/junitreport/pkg/parser/gotest	0.028s
+ok  	github.com/openshift/origin/tools/junitreport/pkg/parser/stack	0.074s
+ok  	github.com/openshift/origin/tools/rebasehelpers/commitchecker	0.021s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/api	1.914s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/api/v1	0.032s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/cmd/kube-apiserver/app	0.036s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/cmd/kube-proxy/app	0.043s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/examples	0.090s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/admission	0.019s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/apimachinery/registered	0.006s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/apis/abac/v0	0.046s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/apis/authorization/validation	0.050s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/apis/componentconfig	0.120s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/apis/componentconfig/install	0.031s
+E0311 14:05:57.299110   52541 errors.go:63] apiserver received an error that is not an unversioned.Status: test Error
+E0311 14:05:57.721717   52541 apiserver.go:433] Failed to parse "not a timeout": time: invalid duration not a timeout
+E0311 14:05:57.785171   52541 apiserver.go:400] apiserver was unable to write a JSON response: no kind is registered for the type apiserver.UnregisteredAPIObject
+E0311 14:05:57.785184   52541 errors.go:63] apiserver received an error that is not an unversioned.Status: no kind is registered for the type apiserver.UnregisteredAPIObject
+2016/03/11 14:05:57 http: multiple response.WriteHeader calls
+--- FAIL: TestPatchAnonymousField (0.00s)
+	resthandler_test.go:57: unexpected error: unable to find api field in struct testPatchType for the json field "theField"
+FAIL
+FAIL	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/apiserver	1.750s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/apis/extensions	0.032s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/apis/extensions/install	0.016s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/apis/extensions/v1beta1	0.046s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/apis/extensions/validation	0.099s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/auth/authenticator/bearertoken	0.017s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/auth/authorizer/abac	0.091s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/auth/authorizer/union	0.021s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/auth/handlers	0.093s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/client/cache	0.245s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/client/chaosclient	0.024s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/client/leaderelection	0.099s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/client/record	0.230s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/client/transport	0.023s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/client/unversioned	22.365s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/client/unversioned/auth	0.031s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/client/unversioned/clientcmd	0.182s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/client/unversioned/clientcmd/api	0.038s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/client/unversioned/portforward	0.093s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/client/unversioned/remotecommand	0.115s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/client/unversioned/testclient	0.114s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/cloudprovider/providers/aws	0.027s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/cloudprovider/providers/gce	0.020s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/cloudprovider/providers/mesos	0.331s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/cloudprovider/providers/openstack	0.011s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/cloudprovider/providers/ovirt	0.012s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/cloudprovider/providers/rackspace	0.043s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller	0.038s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller/daemon	0.252s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller/deployment	0.025s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller/endpoint	0.104s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller/framework	1.382s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller/gc	0.100s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller/job	0.126s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller/namespace	0.033s
+I0311 14:06:28.527375   53725 nodecontroller.go:134] Sending events to api server.
+I0311 14:06:28.527534   53725 nodecontroller.go:134] Sending events to api server.
+W0311 14:06:28.527586   53725 nodecontroller.go:585] Missing timestamp for Node node0. Assuming now as a timestamp.
+I0311 14:06:28.527611   53725 nodecontroller.go:134] Sending events to api server.
+W0311 14:06:28.527670   53725 nodecontroller.go:585] Missing timestamp for Node node0. Assuming now as a timestamp.
+I0311 14:06:28.527681   53725 nodecontroller.go:423] Evicting pods on node node0: 2015-01-01 13:00:00 +0000 UTC is later than 2015-01-01 12:00:00 +0000 UTC + 10m0s
+E0311 14:06:28.527807   53725 event.go:251] Could not construct reference to: '&api.Pod{TypeMeta:unversioned.TypeMeta{Kind:"", APIVersion:""}, ObjectMeta:api.ObjectMeta{Name:"pod0", GenerateName:"", Namespace:"", SelfLink:"", UID:"", ResourceVersion:"", Generation:0, CreationTimestamp:unversioned.Time{Time:time.Time{sec:0, nsec:0, loc:(*time.Location)(nil)}}, DeletionTimestamp:(*unversioned.Time)(nil), DeletionGracePeriodSeconds:(*int64)(nil), Labels:map[string]string(nil), Annotations:map[string]string(nil)}, Spec:api.PodSpec{Volumes:[]api.Volume(nil), Containers:[]api.Container(nil), RestartPolicy:"", TerminationGracePeriodSeconds:(*int64)(nil), ActiveDeadlineSeconds:(*int64)(nil), DNSPolicy:"", NodeSelector:map[string]string(nil), ServiceAccountName:"", NodeName:"node0", SecurityContext:(*api.PodSecurityContext)(nil), ImagePullSecrets:[]api.LocalObjectReference(nil)}, Status:api.PodStatus{Phase:"", Conditions:[]api.PodCondition{api.PodCondition{Type:"Ready", Status:"True", LastProbeTime:unversioned.Time{Time:time.Time{sec:0, nsec:0, loc:(*time.Location)(nil)}}, LastTransitionTime:unversioned.Time{Time:time.Time{sec:0, nsec:0, loc:(*time.Location)(nil)}}, Reason:"", Message:""}}, Message:"", Reason:"", HostIP:"", PodIP:"", StartTime:(*unversioned.Time)(nil), ContainerStatuses:[]api.ContainerStatus(nil)}}' due to: 'selfLink was empty, can't make reference'. Will not report event: 'Normal' 'NodeControllerEviction' 'Marking for deletion Pod pod0 from Node node0'
+I0311 14:06:28.527891   53725 nodecontroller.go:134] Sending events to api server.
+W0311 14:06:28.527940   53725 nodecontroller.go:585] Missing timestamp for Node node0. Assuming now as a timestamp.
+I0311 14:06:28.527986   53725 nodecontroller.go:134] Sending events to api server.
+W0311 14:06:28.528583   53725 nodecontroller.go:585] Missing timestamp for Node node0. Assuming now as a timestamp.
+I0311 14:06:28.528606   53725 nodecontroller.go:429] Evicting pods on node node0: 2015-01-01 13:00:00 +0000 UTC is later than 2015-01-01 12:00:00 +0000 UTC + 9m20s
+E0311 14:06:28.528658   53725 event.go:251] Could not construct reference to: '&api.Pod{TypeMeta:unversioned.TypeMeta{Kind:"", APIVersion:""}, ObjectMeta:api.ObjectMeta{Name:"pod0", GenerateName:"", Namespace:"", SelfLink:"", UID:"", ResourceVersion:"", Generation:0, CreationTimestamp:unversioned.Time{Time:time.Time{sec:0, nsec:0, loc:(*time.Location)(nil)}}, DeletionTimestamp:(*unversioned.Time)(nil), DeletionGracePeriodSeconds:(*int64)(nil), Labels:map[string]string(nil), Annotations:map[string]string(nil)}, Spec:api.PodSpec{Volumes:[]api.Volume(nil), Containers:[]api.Container(nil), RestartPolicy:"", TerminationGracePeriodSeconds:(*int64)(nil), ActiveDeadlineSeconds:(*int64)(nil), DNSPolicy:"", NodeSelector:map[string]string(nil), ServiceAccountName:"", NodeName:"node0", SecurityContext:(*api.PodSecurityContext)(nil), ImagePullSecrets:[]api.LocalObjectReference(nil)}, Status:api.PodStatus{Phase:"", Conditions:[]api.PodCondition{api.PodCondition{Type:"Ready", Status:"True", LastProbeTime:unversioned.Time{Time:time.Time{sec:0, nsec:0, loc:(*time.Location)(nil)}}, LastTransitionTime:unversioned.Time{Time:time.Time{sec:0, nsec:0, loc:(*time.Location)(nil)}}, Reason:"", Message:""}}, Message:"", Reason:"", HostIP:"", PodIP:"", StartTime:(*unversioned.Time)(nil), ContainerStatuses:[]api.ContainerStatus(nil)}}' due to: 'selfLink was empty, can't make reference'. Will not report event: 'Normal' 'NodeControllerEviction' 'Marking for deletion Pod pod0 from Node node0'
+I0311 14:06:28.529052   53725 nodecontroller.go:134] Sending events to api server.
+I0311 14:06:28.529174   53725 nodecontroller.go:134] Sending events to api server.
+I0311 14:06:28.529229   53725 nodecontroller.go:134] Sending events to api server.
+W0311 14:06:28.529281   53725 nodecontroller.go:585] Missing timestamp for Node node0. Assuming now as a timestamp.
+I0311 14:06:28.529412   53725 nodecontroller.go:134] Sending events to api server.
+W0311 14:06:28.529455   53725 nodecontroller.go:585] Missing timestamp for Node node0. Assuming now as a timestamp.
+I0311 14:06:28.529669   53725 nodecontroller.go:134] Sending events to api server.
+I0311 14:06:28.529748   53725 nodecontroller.go:134] Sending events to api server.
+W0311 14:06:28.529802   53725 nodecontroller.go:585] Missing timestamp for Node node0. Assuming now as a timestamp.
+I0311 14:06:28.529822   53725 nodecontroller.go:134] Sending events to api server.
+W0311 14:06:28.529863   53725 nodecontroller.go:585] Missing timestamp for Node node0. Assuming now as a timestamp.
+I0311 14:06:28.530159   53725 nodecontroller.go:134] Sending events to api server.
+W0311 14:06:28.530214   53725 nodecontroller.go:585] Missing timestamp for Node node0. Assuming now as a timestamp.
+W0311 14:06:28.530218   53725 nodecontroller.go:585] Missing timestamp for Node node1. Assuming now as a timestamp.
+E0311 14:06:28.530288   53725 event.go:251] Could not construct reference to: '&api.Pod{TypeMeta:unversioned.TypeMeta{Kind:"", APIVersion:""}, ObjectMeta:api.ObjectMeta{Name:"pod1", GenerateName:"", Namespace:"", SelfLink:"", UID:"", ResourceVersion:"", Generation:0, CreationTimestamp:unversioned.Time{Time:time.Time{sec:0, nsec:0, loc:(*time.Location)(nil)}}, DeletionTimestamp:(*unversioned.Time)(nil), DeletionGracePeriodSeconds:(*int64)(nil), Labels:map[string]string(nil), Annotations:map[string]string(nil)}, Spec:api.PodSpec{Volumes:[]api.Volume(nil), Containers:[]api.Container(nil), RestartPolicy:"", TerminationGracePeriodSeconds:(*int64)(nil), ActiveDeadlineSeconds:(*int64)(nil), DNSPolicy:"", NodeSelector:map[string]string(nil), ServiceAccountName:"", NodeName:"node1", SecurityContext:(*api.PodSecurityContext)(nil), ImagePullSecrets:[]api.LocalObjectReference(nil)}, Status:api.PodStatus{Phase:"", Conditions:[]api.PodCondition{api.PodCondition{Type:"Ready", Status:"True", LastProbeTime:unversioned.Time{Time:time.Time{sec:0, nsec:0, loc:(*time.Location)(nil)}}, LastTransitionTime:unversioned.Time{Time:time.Time{sec:0, nsec:0, loc:(*time.Location)(nil)}}, Reason:"", Message:""}}, Message:"", Reason:"", HostIP:"", PodIP:"", StartTime:(*unversioned.Time)(nil), ContainerStatuses:[]api.ContainerStatus(nil)}}' due to: 'selfLink was empty, can't make reference'. Will not report event: 'Normal' 'NodeControllerEviction' 'Marking for deletion Pod pod1 from Node node1'
+I0311 14:06:28.530401   53725 nodecontroller.go:137] No api server defined - no events will be sent to API server.
+--- FAIL: TestDelNode (0.00s)
+	rate_limited_queue_test.go:76: Invalid queue. Got [0xc82031bec0 0xc82031be80], expected [second third]
+FAIL
+FAIL	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller/node	0.040s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller/persistentvolume	10.059s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller/podautoscaler	24.080s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller/podautoscaler/metrics	0.036s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller/replication	9.822s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller/resourcequota	0.075s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller/route	0.099s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller/service	0.069s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/controller/serviceaccount	0.027s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/conversion	0.775s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/conversion/queryparams	0.021s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/credentialprovider	2.030s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/credentialprovider/aws	0.008s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/credentialprovider/gcp	0.034s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/fieldpath	0.038s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/fields	0.008s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/genericapiserver	2.848s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/healthz	0.005s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/httplog	0.010s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubectl	0.396s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubectl/cmd	0.300s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubectl/cmd/config	0.643s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubectl/cmd/util	0.322s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubectl/cmd/util/editor	0.072s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubectl/resource	0.080s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet	0.797s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/client	0.029s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/cm	0.081s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/config	0.096s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/container	0.110s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/dockertools	0.622s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/envvars	0.109s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/lifecycle	0.011s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/network	0.027s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/network/cni	0.141s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/network/exec	0.231s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/network/hairpin	0.035s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/pleg	0.089s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/pod	0.028s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/prober	8.329s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/prober/results	0.021s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/qos	0.017s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/rkt	0.022s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/server	0.644s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/status	0.052s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/types	0.035s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/kubelet/util/queue	0.016s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/labels	0.069s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/master	10.672s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/probe/exec	0.114s
+--- FAIL: TestHTTPProbeChecker (1.01s)
+	http_test.go:110: Expected one of []string{"HTTP probe failed with statuscode: -1"}, got Get http://127.0.0.1:57896: malformed HTTP status code "-1"
+FAIL
+FAIL	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/probe/http	1.037s
+--- FAIL: TestTcpHealthChecker (0.00s)
+	tcp_test.go:82: #[%!d(string=unknown port) %!d(string=Servname not supported for ai_socktype) %!d(string=nodename nor servname provided, or not known)]: expected output=one of "dial tcp: invalid port -1", get=%!s(MISSING)
+FAIL
+FAIL	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/probe/tcp	0.011s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/proxy/config	0.053s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/proxy/iptables	0.041s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/proxy/userspace	5.367s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/componentstatus	0.021s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/configmap	0.038s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/configmap/etcd	6.441s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/controller	0.016s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/controller/etcd	11.274s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/daemonset	0.017s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/daemonset/etcd	6.833s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/deployment	0.030s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/deployment/etcd	8.102s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/endpoint	0.015s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/endpoint/etcd	5.588s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/event	0.017s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/event/etcd	1.653s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/experimental/controller/etcd	0.703s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/generic	0.019s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/generic/etcd	7.980s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/generic/rest	0.246s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/horizontalpodautoscaler	0.122s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/horizontalpodautoscaler/etcd	6.148s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/ingress	0.040s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/ingress/etcd	7.454s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/job	0.031s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/job/etcd	5.863s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/limitrange	0.012s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/limitrange/etcd	5.530s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/namespace	0.012s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/namespace/etcd	5.361s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/node	0.014s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/node/etcd	5.684s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/persistentvolume	0.025s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/persistentvolumeclaim	0.018s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/persistentvolumeclaim/etcd	5.265s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/persistentvolume/etcd	5.820s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/pod	0.038s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/pod/etcd	12.972s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/pod/rest	0.176s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/podtemplate	0.014s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/podtemplate/etcd	5.884s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/resourcequota	0.019s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/resourcequota/etcd	5.047s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/secret	0.034s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/secret/etcd	5.476s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/securitycontextconstraints/etcd	0.936s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/service	0.023s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/serviceaccount	0.013s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/serviceaccount/etcd	5.637s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/service/allocator	0.015s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/service/allocator/etcd	0.893s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/service/etcd	4.594s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/service/ipallocator	0.020s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/service/ipallocator/controller	0.029s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/service/ipallocator/etcd	1.385s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/service/portallocator	0.008s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/thirdpartyresource	0.020s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/thirdpartyresourcedata	0.042s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/thirdpartyresourcedata/etcd	6.777s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/registry/thirdpartyresource/etcd	6.645s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/securitycontext	0.016s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/securitycontextconstraints	0.016s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/securitycontextconstraints/capabilities	0.015s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/securitycontextconstraints/group	0.010s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/securitycontextconstraints/selinux	0.053s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/securitycontextconstraints/user	0.067s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/serviceaccount	0.032s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/storage	7.024s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/storage/etcd	10.048s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/storage/etcd/util	0.019s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util	5.052s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/atomic	0.029s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/bandwidth	0.110s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/config	0.007s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/dbus	0.005s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/deployment	0.041s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/errors	0.027s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/exec	0.007s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/flushwriter	0.007s
+--- FAIL: TestDeepHashObject (0.01s)
+	hash_test.go:72: hash of the same object ("(map[hash.C]bool)map[859532317920::false 859532317952::true]") produced different results: 2276925819 vs 2138644859
+FAIL
+FAIL	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/hash	0.055s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/httpstream	0.009s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/httpstream/spdy	0.135s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/intstr	0.005s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/io	0.020s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/iptables	0.039s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/json	0.011s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/jsonpath	0.020s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/keymutex	1.004s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/labels	0.011s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/mount	0.010s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/net	0.007s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/oom	0.044s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/procfs	0.038s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/proxy	0.047s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/rand	0.004s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/sets	0.034s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/slice	0.020s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/strategicpatch	0.076s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/strings	0.017s
+--- FAIL: TestFakeHandlerPath (0.00s)
+	fake_handler_test.go:43: unexpected error: Get http://127.0.0.1:55638/foo/bar: malformed HTTP status code "0"
+--- FAIL: TestFakeHandlerPathNoBody (0.00s)
+	fake_handler_test.go:65: unexpected error: Get http://127.0.0.1:52106/foo/bar: malformed HTTP status code "0"
+--- FAIL: TestFakeHandlerWrongPath (0.00s)
+	fake_handler_test.go:98: unexpected error: Get http://127.0.0.1:60609/foo/baz: malformed HTTP status code "0"
+--- FAIL: TestFakeHandlerWrongMethod (0.00s)
+	fake_handler_test.go:124: unexpected error: Put http://127.0.0.1:48757/foo/bar: malformed HTTP status code "0"
+--- FAIL: TestFakeHandlerWrongBody (0.00s)
+	fake_handler_test.go:151: unexpected error: Get http://127.0.0.1:33664/foo/bar: malformed HTTP status code "0"
+--- FAIL: TestFakeHandlerNilBody (0.00s)
+	fake_handler_test.go:179: unexpected error: Get http://127.0.0.1:40554/foo/bar: malformed HTTP status code "0"
+FAIL
+FAIL	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/testing	0.026s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/validation	0.029s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/validation/field	0.023s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/wait	0.081s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/workqueue	0.174s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/wsstream	0.020s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/util/yaml	0.032s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/version	0.040s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume	0.040s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/aws_ebs	0.046s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/cephfs	0.158s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/cinder	2.070s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/downwardapi	0.041s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/empty_dir	0.049s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/fc	0.055s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/flexvolume	0.053s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/flocker	0.077s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/gce_pd	0.087s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/git_repo	0.042s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/glusterfs	0.111s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/host_path	0.046s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/iscsi	2.028s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/nfs	0.070s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/persistent_claim	0.040s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/rbd	0.085s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/volume/secret	0.081s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/watch	0.011s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/pkg/watch/json	0.015s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/admission/admit	0.065s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/admission/alwayspullimages	0.012s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/admission/deny	0.026s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/admission/exec	0.019s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/admission/initialresources	0.120s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/admission/limitranger	0.042s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/admission/namespace/autoprovision	0.091s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/admission/namespace/exists	0.017s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/admission/namespace/lifecycle	0.044s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/admission/persistentvolume/label	0.030s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/admission/resourcequota	0.111s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/admission/securitycontext/scdeny	0.034s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/admission/serviceaccount	1.425s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/auth/authenticator/password/passwordfile	0.020s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/auth/authenticator/request/basicauth	0.019s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/auth/authenticator/request/union	0.005s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/auth/authenticator/request/x509	0.013s
+I0311 14:09:10.676876   61221 oidc.go:72] No x509 certificates provided, will use host's root CA set
+E0311 14:09:40.677233   61221 oidc.go:94] Failed to fetch provider config, trying again in 1s: Get https://foo/bar/.well-known/openid-configuration: dial tcp 9.26.78.114:443: i/o timeout
+panic: test timed out after 1m0s
+
+goroutine 15 [running]:
+panic(0x80417b60, 0xc8201106c0)
+	/sandbox/lei/go1.6/src/runtime/panic.go:464 +0x402
+testing.startAlarm.func1()
+	/sandbox/lei/go1.6/src/testing/testing.go:725 +0x158
+created by time.goFunc
+	/sandbox/lei/go1.6/src/time/sleep.go:129 +0x42
+
+goroutine 1 [chan receive]:
+testing.RunTests(0x8065cbe8, 0x807d56e0, 0x4, 0x4, 0x1000002bdf462f0)
+	/sandbox/lei/go1.6/src/testing/testing.go:583 +0x6f2
+testing.(*M).Run(0xc82004fef8, 0x3)
+	/sandbox/lei/go1.6/src/testing/testing.go:515 +0x8c
+main.main()
+	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/auth/authenticator/token/oidc/_test/_testmain.go:60 +0x14c
+
+goroutine 17 [syscall, locked to thread]:
+runtime.goexit()
+	/sandbox/lei/go1.6/src/runtime/asm_s390x.s:1015 +0x2
+
+goroutine 5 [chan receive]:
+github.com/golang/glog.(*loggingT).flushDaemon(0x807ef960)
+	/lzh/go/src/github.com/openshift/origin/Godeps/_workspace/src/github.com/golang/glog/glog.go:879 +0x70
+created by github.com/golang/glog.init.1
+	/lzh/go/src/github.com/openshift/origin/Godeps/_workspace/src/github.com/golang/glog/glog.go:410 +0x34c
+
+goroutine 10 [select]:
+net/http.(*Transport).getConn(0xc8200ca240, 0xc8200d4620, 0x0, 0xc820109290, 0x5, 0xc8201105e3, 0x7, 0x0, 0x0, 0x0)
+	/sandbox/lei/go1.6/src/net/http/transport.go:707 +0x482
+net/http.(*Transport).RoundTrip(0xc8200ca240, 0xc8200d4620, 0xc8200ca240, 0x0, 0x0)
+	/sandbox/lei/go1.6/src/net/http/transport.go:307 +0x7a4
+net/http.send(0xc8200d4620, 0x3ffbdf44820, 0xc8200ca240, 0x0, 0x30, 0x0, 0xc8201092f0, 0x0, 0x0)
+	/sandbox/lei/go1.6/src/net/http/client.go:260 +0x686
+net/http.(*Client).send(0xc820108c30, 0xc8200d4620, 0x0, 0x0, 0x0, 0x8065a68d, 0x0, 0x0)
+	/sandbox/lei/go1.6/src/net/http/client.go:155 +0x17e
+net/http.(*Client).doFollowingRedirects(0xc820108c30, 0xc8200d4620, 0x8065cf68, 0x0, 0x0, 0x0)
+	/sandbox/lei/go1.6/src/net/http/client.go:475 +0x86c
+net/http.(*Client).Do(0xc820108c30, 0xc8200d4620, 0xc820109290, 0x0, 0x0)
+	/sandbox/lei/go1.6/src/net/http/client.go:188 +0xfe
+github.com/coreos/go-oidc/oidc.(*httpProviderConfigGetter).Get(0xc820131650, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	/lzh/go/src/github.com/openshift/origin/Godeps/_workspace/src/github.com/coreos/go-oidc/oidc/provider.go:205 +0x14c
+github.com/coreos/go-oidc/oidc.FetchProviderConfig(0x3ffbdf46380, 0xc820108c30, 0x80589bd0, 0xf, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	/lzh/go/src/github.com/openshift/origin/Godeps/_workspace/src/github.com/coreos/go-oidc/oidc/provider.go:240 +0x18a
+github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/auth/authenticator/token/oidc.New(0x80589bd0, 0xf, 0x80586d40, 0xa, 0x0, 0x0, 0x8057d098, 0x3, 0x800065ea, 0x0, ...)
+	/lzh/go/src/github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/auth/authenticator/token/oidc/oidc.go:90 +0x65a
+github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/auth/authenticator/token/oidc.TestOIDCDiscoveryTimeout(0xc820088480)
+	/lzh/go/src/github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/auth/authenticator/token/oidc/oidc_test.go:195 +0xae
+testing.tRunner(0xc820088480, 0x807d56e0)
+	/sandbox/lei/go1.6/src/testing/testing.go:473 +0xe2
+created by testing.RunTests
+	/sandbox/lei/go1.6/src/testing/testing.go:582 +0x6be
+
+goroutine 13 [IO wait]:
+net.runtime_pollWait(0x3ffbdf457e0, 0x77, 0x80060f48)
+	/sandbox/lei/go1.6/src/runtime/netpoll.go:160 +0x70
+net.(*pollDesc).Wait(0xc82011d250, 0x77, 0x0, 0x0)
+	/sandbox/lei/go1.6/src/net/fd_poll_runtime.go:73 +0x42
+net.(*pollDesc).WaitWrite(0xc82011d250, 0x0, 0x0)
+	/sandbox/lei/go1.6/src/net/fd_poll_runtime.go:82 +0x36
+net.(*netFD).connect(0xc82011d1f0, 0x0, 0x0, 0x3ffbdf464e0, 0xc82011e480, 0xece750f13, 0x28619db000000004, 0x807ef720, 0x0, 0x0, ...)
+	/sandbox/lei/go1.6/src/net/fd_unix.go:127 +0x2c6
+net.(*netFD).dial(0xc82011d1f0, 0x3ffbdf46498, 0x0, 0x3ffbdf46498, 0xc820109410, 0xece750f13, 0x28619db020110670, 0x807ef720, 0x0, 0x0, ...)
+	/sandbox/lei/go1.6/src/net/sock_posix.go:137 +0x344
+net.socket(0x8057d1c0, 0x3, 0x2, 0x1, 0x0, 0xc820109410, 0x3ffbdf46498, 0x0, 0x3ffbdf46498, 0xc820109410, ...)
+	/sandbox/lei/go1.6/src/net/sock_posix.go:89 +0x3b0
+net.internetSocket(0x8057d1c0, 0x3, 0x3ffbdf46498, 0x0, 0x3ffbdf46498, 0xc820109410, 0xece750f13, 0x28619db020015e40, 0x807ef720, 0x1, ...)
+	/sandbox/lei/go1.6/src/net/ipsock_posix.go:161 +0x138
+net.dialTCP(0x8057d1c0, 0x3, 0x0, 0xc820109410, 0xece750f13, 0x28619db000000001, 0x807ef720, 0x0, 0x1, 0x0, ...)
+	/sandbox/lei/go1.6/src/net/tcpsock_posix.go:171 +0x162
+net.dialSingle(0xc820088630, 0x3ffbdf46408, 0xc820109410, 0xece750f13, 0x28619db0807ef720, 0x807ef720, 0x0, 0x0, 0x0, 0x0)
+	/sandbox/lei/go1.6/src/net/dial.go:371 +0x3ea
+net.dialSerial.func1(0xece750f13, 0x28619db0ce750f13, 0x807ef720, 0x0, 0x0, 0x0, 0x0)
+	/sandbox/lei/go1.6/src/net/dial.go:343 +0x6a
+net.dial(0x8057d1c0, 0x3, 0x3ffbdf46408, 0xc820109410, 0xc820051638, 0xece750f13, 0x28619db000000001, 0x807ef720, 0x0, 0x0, ...)
+	/sandbox/lei/go1.6/src/net/fd_unix.go:40 +0x56
+net.dialSerial(0xc820088630, 0xc820110680, 0x1, 0x1, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/sandbox/lei/go1.6/src/net/dial.go:345 +0x6d6
+net.(*Dialer).Dial(0xc820018410, 0x8057d1c0, 0x3, 0xc8201105e3, 0x7, 0x0, 0x0, 0x0, 0x0)
+	/sandbox/lei/go1.6/src/net/dial.go:239 +0x4c0
+net.(*Dialer).Dial-fm(0x8057d1c0, 0x3, 0xc8201105e3, 0x7, 0x0, 0x0, 0x0, 0x0)
+	/sandbox/lei/go1.6/src/net/http/transport.go:38 +0x66
+net/http.(*Transport).dial(0xc8200ca240, 0x8057d1c0, 0x3, 0xc8201105e3, 0x7, 0x0, 0x0, 0x0, 0x0)
+	/sandbox/lei/go1.6/src/net/http/transport.go:655 +0x7a
+net/http.(*Transport).dialConn(0xc8200ca240, 0x0, 0xc820109290, 0x5, 0xc8201105e3, 0x7, 0x56e317d6, 0x0, 0x0)
+	/sandbox/lei/go1.6/src/net/http/transport.go:758 +0x1b44
+net/http.(*Transport).getConn.func4(0xc8200ca240, 0x0, 0xc820109290, 0x5, 0xc8201105e3, 0x7, 0xc820065320)
+	/sandbox/lei/go1.6/src/net/http/transport.go:702 +0x66
+created by net/http.(*Transport).getConn
+	/sandbox/lei/go1.6/src/net/http/transport.go:704 +0x234
+FAIL	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/auth/authenticator/token/oidc	60.049s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/auth/authenticator/token/tokenfile	0.051s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/scheduler	0.040s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/scheduler/algorithm	0.012s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/scheduler/algorithm/predicates	0.029s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/scheduler/algorithm/priorities	0.016s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/scheduler/algorithmprovider	0.034s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/scheduler/algorithmprovider/defaults	0.013s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/scheduler/api/validation	0.026s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/plugin/pkg/scheduler/factory	0.026s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/third_party/forked/reflect	0.004s
+ok  	github.com/openshift/origin/Godeps/_workspace/src/k8s.io/kubernetes/third_party/golang/expansion	0.012s
