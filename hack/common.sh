@@ -19,7 +19,7 @@ readonly OS_OUTPUT_SUBPATH="${OS_OUTPUT_SUBPATH:-_output/local}"
 readonly OS_OUTPUT="${OS_ROOT}/${OS_OUTPUT_SUBPATH}"
 readonly OS_LOCAL_RELEASEPATH="${OS_OUTPUT}/releases"
 #readonly OS_OUTPUT_BINPATH="${OS_OUTPUT}/bin"
-readonly OS_OUTPUT_BINPATH="/lzh/go/bin"
+readonly OS_OUTPUT_BINPATH="/go/bin"
 
 readonly OS_GO_PACKAGE=github.com/openshift/origin
 readonly OS_GOPATH=$(
