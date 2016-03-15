@@ -1211,6 +1211,13 @@ type stringTestList []struct {
 }
 
 func TestTranslateTimestamp(t *testing.T) {
+	fmt.Println("hello test!")
+	fmt.Println("2 days ago:")
+	fmt.Println(time.Now().AddDate(0, 0, -2))
+	timestamp := unversioned.Time{Time: time.Now().AddDate(0, 0, -2)}
+	fmt.Println(time.Now())
+	fmt.Println(timestamp.Time)
+	fmt.Println(time.Now().Sub(timestamp.Time))
 	tl := stringTestList{
 		{"a while from now", translateTimestamp(unversioned.Time{Time: time.Now().Add(2.1e9)}), "<invalid>"},
 		{"almost now", translateTimestamp(unversioned.Time{Time: time.Now().Add(1.9e9)}), "0s"},

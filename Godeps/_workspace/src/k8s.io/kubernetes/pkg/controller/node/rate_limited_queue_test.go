@@ -20,6 +20,7 @@ import (
 	"reflect"
 	"testing"
 	"time"
+	"fmt"
 
 	"k8s.io/kubernetes/pkg/util"
 	"k8s.io/kubernetes/pkg/util/sets"
@@ -66,7 +67,12 @@ func TestDelNode(t *testing.T) {
 	evictor.Add("first")
 	evictor.Add("second")
 	evictor.Add("third")
+		
+	fmt.Println(evictor.queue.queue)
+	
 	evictor.Remove("first")
+
+	fmt.Println(evictor.queue.queue)
 
 	queuePattern := []string{"second", "third"}
 	if len(evictor.queue.queue) != len(queuePattern) {

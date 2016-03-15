@@ -1,0 +1,936 @@
+
+Test test/integration -tags='integration docker etcd' ...
+
+Building test executable...
+[INFO] Creating certificates for the OpenShift server
+Generated new key pair as /tmp/openshift/test-integration/openshift.local.config/master/serviceaccounts.public.key and /tmp/openshift/test-integration/openshift.local.config/master/serviceaccounts.private.key
+[INFO] Creating OpenShift node config
+Generating node credentials ...
+Created node config for 9.26.176.96 in /tmp/openshift/test-integration//openshift.local.config/node-9.26.176.96
+[INFO] Creating OpenShift config
+Wrote master config to: /tmp/openshift/test-integration/openshift.local.config/master/master-config.yaml
+Generating node credentials ...
+Created node config for 9.26.176.96 in /tmp/openshift/test-integration/openshift.local.config/node-9.26.176.96
+[INFO] To debug: export KUBECONFIG=/tmp/openshift/test-integration//openshift.local.config/master/admin.kubeconfig
+etcd: {"etcdserver":"2.2.2+git","etcdcluster":"not_decided"}
+{"action":"set","node":{"key":"/_test","value":"","modifiedIndex":3,"createdIndex":3}}
+
+Running TestAccessDisabledWebConsole...
+ok      TestAccessDisabledWebConsole
+Running TestAccessOriginWebConsole...
+ok      TestAccessOriginWebConsole
+Running TestAuthProxyOnAuthorize...
+ok      TestAuthProxyOnAuthorize
+Running TestAuthorizationResolution...
+ok      TestAuthorizationResolution
+Running TestAuthorizationResourceAccessReview...
+ok      TestAuthorizationResourceAccessReview
+Running TestAuthorizationRestrictedAccessForProjectAdmins...
+ok      TestAuthorizationRestrictedAccessForProjectAdmins
+Running TestAuthorizationSubjectAccessReview...
+ok      TestAuthorizationSubjectAccessReview
+Running TestAutomaticCreationOfPullSecrets...
+ok      TestAutomaticCreationOfPullSecrets
+Running TestBasicGroupManipulation...
+ok      TestBasicGroupManipulation
+Running TestBasicUserBasedGroupManipulation...
+ok      TestBasicUserBasedGroupManipulation
+Running TestBootstrapPolicyAuthenticatedUsersAgainstOpenshiftNamespace...
+ok      TestBootstrapPolicyAuthenticatedUsersAgainstOpenshiftNamespace
+Running TestBootstrapPolicyOverwritePolicyCommand...
+ok      TestBootstrapPolicyOverwritePolicyCommand
+Running TestBootstrapPolicySelfSubjectAccessReviews...
+ok      TestBootstrapPolicySelfSubjectAccessReviews
+Running TestBuildCompletePodDeleteController...
+ok      TestBuildCompletePodDeleteController
+Running TestBuildDefaultEnvironment...
+ok      TestBuildDefaultEnvironment
+Running TestBuildDefaultGitHTTPProxy...
+ok      TestBuildDefaultGitHTTPProxy
+Running TestBuildDefaultGitHTTPSProxy...
+ok      TestBuildDefaultGitHTTPSProxy
+Running TestBuildDeleteController...
+ok      TestBuildDeleteController
+Running TestBuildOverrideForcePull...
+ok      TestBuildOverrideForcePull
+Running TestBuildOverrideForcePullCustomStrategy...
+ok      TestBuildOverrideForcePullCustomStrategy
+Running TestBuildRunningPodDeleteController...
+ok      TestBuildRunningPodDeleteController
+Running TestCLIGetToken...
+ok      TestCLIGetToken
+Running TestClusterResourceOverridePlugin...
+failed  TestClusterResourceOverridePlugin
+I0314 12:50:12.149282   29798 plugins.go:46] Registered cloud provider "aws"
+I0314 12:50:12.149474   29798 plugins.go:46] Registered cloud provider "gce"
+I0314 12:50:12.149688   29798 plugins.go:46] Registered cloud provider "mesos"
+I0314 12:50:12.149738   29798 plugins.go:46] Registered cloud provider "openstack"
+I0314 12:50:12.149747   29798 plugins.go:46] Registered cloud provider "ovirt"
+I0314 12:50:12.149758   29798 plugins.go:46] Registered cloud provider "rackspace"
+I0314 12:50:12.150929   29798 plugins.go:62] Registered admission plugin "ServiceAccount"
+I0314 12:50:12.150960   29798 plugins.go:41] Registered credential provider "google-jwt-key"
+I0314 12:50:12.150970   29798 plugins.go:41] Registered credential provider "google-dockercfg"
+I0314 12:50:12.150979   29798 plugins.go:41] Registered credential provider "google-dockercfg-url"
+I0314 12:50:12.150987   29798 plugins.go:41] Registered credential provider "google-container-registry"
+I0314 12:50:12.161560   29798 plugins.go:62] Registered admission plugin "BuildDefaults"
+I0314 12:50:12.161576   29798 plugins.go:62] Registered admission plugin "BuildOverrides"
+I0314 12:50:12.161589   29798 plugins.go:62] Registered admission plugin "BuildByStrategy"
+I0314 12:50:12.161600   29798 plugins.go:62] Registered admission plugin "OriginNamespaceLifecycle"
+I0314 12:50:12.161609   29798 plugins.go:62] Registered admission plugin "OriginPodNodeEnvironment"
+I0314 12:50:12.161620   29798 plugins.go:62] Registered admission plugin "ProjectRequestLimit"
+I0314 12:50:12.161630   29798 plugins.go:62] Registered admission plugin "LimitRanger"
+I0314 12:50:12.161638   29798 plugins.go:62] Registered admission plugin "ClusterResourceOverride"
+I0314 12:50:12.161647   29798 plugins.go:62] Registered admission plugin "RunOnceDuration"
+I0314 12:50:12.161668   29798 plugins.go:62] Registered admission plugin "SecurityContextConstraint"
+I0314 12:50:12.161677   29798 plugins.go:62] Registered admission plugin "SCCExecRestrictions"
+I0314 12:50:12.161685   29798 plugins.go:62] Registered admission plugin "AlwaysAdmit"
+I0314 12:50:12.161693   29798 plugins.go:62] Registered admission plugin "AlwaysPullImages"
+I0314 12:50:12.161703   29798 plugins.go:62] Registered admission plugin "DenyEscalatingExec"
+I0314 12:50:12.161710   29798 plugins.go:62] Registered admission plugin "DenyExecOnPrivileged"
+I0314 12:50:12.161716   29798 plugins.go:62] Registered admission plugin "NamespaceExists"
+I0314 12:50:12.161725   29798 plugins.go:62] Registered admission plugin "NamespaceLifecycle"
+I0314 12:50:12.161737   29798 plugins.go:62] Registered admission plugin "ResourceQuota"
+I0314 12:50:12.161747   29798 plugins.go:62] Registered admission plugin "AlwaysDeny"
+I0314 12:50:12.161772   29798 plugins.go:62] Registered admission plugin "InitialResources"
+I0314 12:50:12.161782   29798 plugins.go:62] Registered admission plugin "NamespaceAutoProvision"
+I0314 12:50:12.161790   29798 plugins.go:62] Registered admission plugin "PersistentVolumeLabel"
+I0314 12:50:12.161798   29798 plugins.go:62] Registered admission plugin "SecurityContextDeny"
+masterAddr: "127.0.0.1:12000"
+dnsAddr: "127.0.0.1:8053"
+I0314 12:50:12.379312   29798 create_mastercerts.go:134] Creating all certs with: admin.CreateMasterCertsOptions{CertDir:"/tmp/openshift/test-integration/openshift.local.config/master", SignerName:"openshift-signer@1457974212", Hostnames:[]string{"127.0.0.1", "172.30.0.1", "kubernetes", "kubernetes.default", "kubernetes.default.svc", "kubernetes.default.svc.cluster.local", "localhost", "openshift", "openshift.default", "openshift.default.svc", "openshift.default.svc.cluster.local"}, APIServerURL:"https://127.0.0.1:12000", PublicAPIServerURL:"https://127.0.0.1:12000", Overwrite:false, Output:(*os.File)(0xc820038018)}
+I0314 12:50:12.379400   29798 create_signercert.go:96] Creating a signer cert with: admin.CreateSignerCertOptions{CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.key", SerialFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.serial.txt", Name:"openshift-signer@1457974212", Output:(*os.File)(0xc820038018), Overwrite:false}
+I0314 12:50:12.380678   29798 create_signercert.go:108] Keeping existing CA cert at /tmp/openshift/test-integration/openshift.local.config/master/ca.crt and key at /tmp/openshift/test-integration/openshift.local.config/master/ca.key
+I0314 12:50:12.380737   29798 create_keypair.go:89] Creating a key pair with: admin.CreateKeyPairOptions{PublicKeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/serviceaccounts.public.key", PrivateKeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/serviceaccounts.private.key", Overwrite:false, Output:(*os.File)(0xc820038018)}
+I0314 12:50:12.380789   29798 create_keypair.go:93] Keeping existing private key file /tmp/openshift/test-integration/openshift.local.config/master/serviceaccounts.private.key
+I0314 12:50:12.380804   29798 create_clientcert.go:52] Creating a client cert with: admin.CreateClientCertOptions{SignerCertOptions:(*admin.SignerCertOptions)(0xc82076b540), CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/master.etcd-client.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/master.etcd-client.key", User:"system:master", Groups:[]string{}, Overwrite:false, Output:(*os.File)(0xc820038018)} and &admin.SignerCertOptions{CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.key", SerialFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.serial.txt", lock:sync.Mutex{state:0, sema:0x0}, ca:(*crypto.CA)(nil)}
+I0314 12:50:12.380774   29798 create_servercert.go:106] Creating a server cert with: admin.CreateServerCertOptions{SignerCertOptions:(*admin.SignerCertOptions)(0xc82076b540), CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/master.server.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/master.server.key", Hostnames:[]string{"127.0.0.1", "172.30.0.1", "kubernetes", "kubernetes.default", "kubernetes.default.svc", "kubernetes.default.svc.cluster.local", "localhost", "openshift", "openshift.default", "openshift.default.svc", "openshift.default.svc.cluster.local"}, Overwrite:false, Output:(*os.File)(0xc820038018)}
+I0314 12:50:12.380778   29798 create_clientcert.go:52] Creating a client cert with: admin.CreateClientCertOptions{SignerCertOptions:(*admin.SignerCertOptions)(0xc82076b540), CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/openshift-master.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/openshift-master.key", User:"system:openshift-master", Groups:[]string{"system:masters"}, Overwrite:false, Output:(*os.File)(0xc820038018)} and &admin.SignerCertOptions{CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.key", SerialFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.serial.txt", lock:sync.Mutex{state:5, sema:0x0}, ca:(*crypto.CA)(nil)}
+I0314 12:50:12.380873   29798 create_clientcert.go:52] Creating a client cert with: admin.CreateClientCertOptions{SignerCertOptions:(*admin.SignerCertOptions)(0xc82076b540), CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/master.kubelet-client.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/master.kubelet-client.key", User:"system:openshift-node-admin", Groups:[]string{"system:node-admins"}, Overwrite:false, Output:(*os.File)(0xc820038018)} and &admin.SignerCertOptions{CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.key", SerialFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.serial.txt", lock:sync.Mutex{state:9, sema:0x0}, ca:(*crypto.CA)(nil)}
+I0314 12:50:12.380897   29798 create_clientcert.go:52] Creating a client cert with: admin.CreateClientCertOptions{SignerCertOptions:(*admin.SignerCertOptions)(0xc82076b540), CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/master.proxy-client.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/master.proxy-client.key", User:"system:master-proxy", Groups:[]string{}, Overwrite:false, Output:(*os.File)(0xc820038018)} and &admin.SignerCertOptions{CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.key", SerialFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.serial.txt", lock:sync.Mutex{state:13, sema:0x0}, ca:(*crypto.CA)(nil)}
+I0314 12:50:12.383132   29798 create_clientcert.go:70] Keeping existing client cert at /tmp/openshift/test-integration/openshift.local.config/master/master.etcd-client.crt and key at /tmp/openshift/test-integration/openshift.local.config/master/master.etcd-client.key
+I0314 12:50:12.383527   29798 crypto.go:241] Found existing server certificate in /tmp/openshift/test-integration/openshift.local.config/master/master.server.crt
+I0314 12:50:12.383536   29798 create_servercert.go:123] Keeping existing server certificate at /tmp/openshift/test-integration/openshift.local.config/master/master.server.crt, key at /tmp/openshift/test-integration/openshift.local.config/master/master.server.key
+I0314 12:50:12.383548   29798 create_servercert.go:106] Creating a server cert with: admin.CreateServerCertOptions{SignerCertOptions:(*admin.SignerCertOptions)(0xc82076b540), CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/master.server.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/master.server.key", Hostnames:[]string{"127.0.0.1", "172.30.0.1", "kubernetes", "kubernetes.default", "kubernetes.default.svc", "kubernetes.default.svc.cluster.local", "localhost", "openshift", "openshift.default", "openshift.default.svc", "openshift.default.svc.cluster.local"}, Overwrite:false, Output:(*os.File)(0xc820038018)}
+I0314 12:50:12.383589   29798 create_clientcert.go:70] Keeping existing client cert at /tmp/openshift/test-integration/openshift.local.config/master/openshift-master.crt and key at /tmp/openshift/test-integration/openshift.local.config/master/openshift-master.key
+I0314 12:50:12.383604   29798 create_kubeconfig.go:132] creating a .kubeconfig with: admin.CreateKubeConfigOptions{APIServerURL:"https://127.0.0.1:12000", PublicAPIServerURL:"https://127.0.0.1:12000", APIServerCAFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.crt", CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/openshift-master.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/openshift-master.key", ContextNamespace:"default", KubeConfigFile:"/tmp/openshift/test-integration/openshift.local.config/master/openshift-master.kubeconfig", Output:(*os.File)(0xc820038018)}
+I0314 12:50:12.383758   29798 create_clientcert.go:70] Keeping existing client cert at /tmp/openshift/test-integration/openshift.local.config/master/master.kubelet-client.crt and key at /tmp/openshift/test-integration/openshift.local.config/master/master.kubelet-client.key
+I0314 12:50:12.384569   29798 create_clientcert.go:70] Keeping existing client cert at /tmp/openshift/test-integration/openshift.local.config/master/master.proxy-client.crt and key at /tmp/openshift/test-integration/openshift.local.config/master/master.proxy-client.key
+I0314 12:50:12.384842   29798 create_kubeconfig.go:200] Generating 'system:openshift-master/127-0-0-1:12000' API client config as /tmp/openshift/test-integration/openshift.local.config/master/openshift-master.kubeconfig
+I0314 12:50:12.384915   29798 crypto.go:241] Found existing server certificate in /tmp/openshift/test-integration/openshift.local.config/master/master.server.crt
+I0314 12:50:12.384920   29798 create_servercert.go:123] Keeping existing server certificate at /tmp/openshift/test-integration/openshift.local.config/master/master.server.crt, key at /tmp/openshift/test-integration/openshift.local.config/master/master.server.key
+I0314 12:50:12.384928   29798 create_servercert.go:106] Creating a server cert with: admin.CreateServerCertOptions{SignerCertOptions:(*admin.SignerCertOptions)(0xc82076b540), CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/etcd.server.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/etcd.server.key", Hostnames:[]string{"127.0.0.1", "172.30.0.1", "kubernetes", "kubernetes.default", "kubernetes.default.svc", "kubernetes.default.svc.cluster.local", "localhost", "openshift", "openshift.default", "openshift.default.svc", "openshift.default.svc.cluster.local"}, Overwrite:false, Output:(*os.File)(0xc820038018)}
+I0314 12:50:12.386154   29798 create_clientcert.go:52] Creating a client cert with: admin.CreateClientCertOptions{SignerCertOptions:(*admin.SignerCertOptions)(0xc82076b540), CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/admin.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/admin.key", User:"system:admin", Groups:[]string{"system:cluster-admins"}, Overwrite:false, Output:(*os.File)(0xc820038018)} and &admin.SignerCertOptions{CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.key", SerialFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.serial.txt", lock:sync.Mutex{state:0, sema:0x0}, ca:(*crypto.CA)(0xc82024f4d0)}
+I0314 12:50:12.386307   29798 crypto.go:241] Found existing server certificate in /tmp/openshift/test-integration/openshift.local.config/master/etcd.server.crt
+I0314 12:50:12.386312   29798 create_servercert.go:123] Keeping existing server certificate at /tmp/openshift/test-integration/openshift.local.config/master/etcd.server.crt, key at /tmp/openshift/test-integration/openshift.local.config/master/etcd.server.key
+I0314 12:50:12.387354   29798 create_clientcert.go:70] Keeping existing client cert at /tmp/openshift/test-integration/openshift.local.config/master/admin.crt and key at /tmp/openshift/test-integration/openshift.local.config/master/admin.key
+I0314 12:50:12.387369   29798 create_kubeconfig.go:132] creating a .kubeconfig with: admin.CreateKubeConfigOptions{APIServerURL:"https://127.0.0.1:12000", PublicAPIServerURL:"https://127.0.0.1:12000", APIServerCAFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.crt", CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/admin.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/admin.key", ContextNamespace:"default", KubeConfigFile:"/tmp/openshift/test-integration/openshift.local.config/master/admin.kubeconfig", Output:(*os.File)(0xc820038018)}
+I0314 12:50:12.388840   29798 create_kubeconfig.go:200] Generating 'system:admin/127-0-0-1:12000' API client config as /tmp/openshift/test-integration/openshift.local.config/master/admin.kubeconfig
+I0314 12:50:12.390430   29798 create_clientcert.go:52] Creating a client cert with: admin.CreateClientCertOptions{SignerCertOptions:(*admin.SignerCertOptions)(0xc82076b540), CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/openshift-router.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/openshift-router.key", User:"system:openshift-router", Groups:[]string{"system:routers"}, Overwrite:false, Output:(*os.File)(0xc820038018)} and &admin.SignerCertOptions{CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.key", SerialFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.serial.txt", lock:sync.Mutex{state:0, sema:0x0}, ca:(*crypto.CA)(0xc82024f4d0)}
+I0314 12:50:12.392279   29798 create_clientcert.go:70] Keeping existing client cert at /tmp/openshift/test-integration/openshift.local.config/master/openshift-router.crt and key at /tmp/openshift/test-integration/openshift.local.config/master/openshift-router.key
+I0314 12:50:12.392297   29798 create_kubeconfig.go:132] creating a .kubeconfig with: admin.CreateKubeConfigOptions{APIServerURL:"https://127.0.0.1:12000", PublicAPIServerURL:"https://127.0.0.1:12000", APIServerCAFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.crt", CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/openshift-router.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/openshift-router.key", ContextNamespace:"default", KubeConfigFile:"/tmp/openshift/test-integration/openshift.local.config/master/openshift-router.kubeconfig", Output:(*os.File)(0xc820038018)}
+I0314 12:50:12.393450   29798 create_kubeconfig.go:200] Generating 'system:openshift-router/127-0-0-1:12000' API client config as /tmp/openshift/test-integration/openshift.local.config/master/openshift-router.kubeconfig
+I0314 12:50:12.394351   29798 create_clientcert.go:52] Creating a client cert with: admin.CreateClientCertOptions{SignerCertOptions:(*admin.SignerCertOptions)(0xc82076b540), CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/openshift-registry.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/openshift-registry.key", User:"system:openshift-registry", Groups:[]string{"system:registries"}, Overwrite:false, Output:(*os.File)(0xc820038018)} and &admin.SignerCertOptions{CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.key", SerialFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.serial.txt", lock:sync.Mutex{state:0, sema:0x0}, ca:(*crypto.CA)(0xc82024f4d0)}
+I0314 12:50:12.395511   29798 create_clientcert.go:70] Keeping existing client cert at /tmp/openshift/test-integration/openshift.local.config/master/openshift-registry.crt and key at /tmp/openshift/test-integration/openshift.local.config/master/openshift-registry.key
+I0314 12:50:12.395530   29798 create_kubeconfig.go:132] creating a .kubeconfig with: admin.CreateKubeConfigOptions{APIServerURL:"https://127.0.0.1:12000", PublicAPIServerURL:"https://127.0.0.1:12000", APIServerCAFile:"/tmp/openshift/test-integration/openshift.local.config/master/ca.crt", CertFile:"/tmp/openshift/test-integration/openshift.local.config/master/openshift-registry.crt", KeyFile:"/tmp/openshift/test-integration/openshift.local.config/master/openshift-registry.key", ContextNamespace:"default", KubeConfigFile:"/tmp/openshift/test-integration/openshift.local.config/master/openshift-registry.kubeconfig", Output:(*os.File)(0xc820038018)}
+I0314 12:50:12.396665   29798 create_kubeconfig.go:200] Generating 'system:openshift-registry/127-0-0-1:12000' API client config as /tmp/openshift/test-integration/openshift.local.config/master/openshift-registry.kubeconfig
+I0314 12:50:12.402316   29798 etcd.go:39] Deleting &etcd.Node{Key:"/kubernetes.io", Value:"", Dir:true, Expiration:(*time.Time)(nil), TTL:0, Nodes:etcd.Nodes(nil), ModifiedIndex:0xecc, CreatedIndex:0xecc} (child of &etcd.Node{Key:"", Value:"", Dir:true, Expiration:(*time.Time)(nil), TTL:0, Nodes:etcd.Nodes{(*etcd.Node)(0xc8203ae060), (*etcd.Node)(0xc8203ae0c0)}, ModifiedIndex:0x0, CreatedIndex:0x0})
+I0314 12:50:12.402806   29798 etcd.go:39] Deleting &etcd.Node{Key:"/openshift.io", Value:"", Dir:true, Expiration:(*time.Time)(nil), TTL:0, Nodes:etcd.Nodes(nil), ModifiedIndex:0xed3, CreatedIndex:0xed3} (child of &etcd.Node{Key:"", Value:"", Dir:true, Expiration:(*time.Time)(nil), TTL:0, Nodes:etcd.Nodes{(*etcd.Node)(0xc8203ae060), (*etcd.Node)(0xc8203ae0c0)}, ModifiedIndex:0x0, CreatedIndex:0x0})
+I0314 12:50:12.405627   29798 loader.go:242] Config loaded from file /tmp/openshift/test-integration/openshift.local.config/master/openshift-master.kubeconfig
+I0314 12:50:12.406227   29798 loader.go:242] Config loaded from file /tmp/openshift/test-integration/openshift.local.config/master/openshift-master.kubeconfig
+I0314 12:50:12.408076   29798 loader.go:242] Config loaded from file /tmp/openshift/test-integration/openshift.local.config/master/openshift-master.kubeconfig
+I0314 12:50:12.408646   29798 loader.go:242] Config loaded from file /tmp/openshift/test-integration/openshift.local.config/master/openshift-master.kubeconfig
+I0314 12:50:12.411562   29798 plugins.go:71] No cloud provider specified.
+I0314 12:50:12.412141   29798 admission.go:109] ClusterResourceOverride config is: &{{ } 100 50 50}
+I0314 12:50:12.412167   29798 admission.go:66] ClusterResourceOverride admission controller loaded with config: &{{ } 100 50 50}
+I0314 12:50:12.412308   29798 admission.go:25] Initializing BuildDefaults plugin with config: &api.BuildDefaultsConfig{TypeMeta:unversioned.TypeMeta{Kind:"", APIVersion:""}, GitHTTPProxy:"", GitHTTPSProxy:"", Env:[]api.EnvVar(nil)}
+I0314 12:50:12.412341   29798 admission.go:22] Initializing BuildOverrides plugin with config: &api.BuildOverridesConfig{TypeMeta:unversioned.TypeMeta{Kind:"", APIVersion:""}, ForcePull:false}
+I0314 12:50:12.414209   29798 interface.go:248] Default route transits interface "enccw0.0.f00d"
+I0314 12:50:12.414359   29798 interface.go:93] Interface enccw0.0.f00d is up
+I0314 12:50:12.414395   29798 interface.go:138] Interface "enccw0.0.f00d" has 2 addresses :[9.26.176.96/24 fe80::200:0:100:38c/64].
+I0314 12:50:12.414409   29798 interface.go:105] Checking addr  9.26.176.96/24.
+I0314 12:50:12.414418   29798 interface.go:114] IP found 9.26.176.96
+I0314 12:50:12.414427   29798 interface.go:144] valid IPv4 address for interface "enccw0.0.f00d" found as 9.26.176.96.
+I0314 12:50:12.414437   29798 interface.go:254] Choosing IP 9.26.176.96 
+I0314 12:50:12.414451   29798 master_config.go:221] Will report 9.26.176.96 as public IP address.
+I0314 12:50:12.414470   29798 start_master.go:385] Starting master on 127.0.0.1:12000 (unknown)
+I0314 12:50:12.414477   29798 start_master.go:386] Public master address is https://127.0.0.1:12000
+I0314 12:50:12.414492   29798 start_master.go:390] Using images from "openshift/origin-<component>:"
+I0314 12:50:12.414824   29798 run_components.go:187] Using default project node label selector: 
+I0314 12:50:12.415723   29798 admission.go:109] ClusterResourceOverride config is: &{{ } 100 50 50}
+I0314 12:50:12.415752   29798 genericapiserver.go:331] Setting GenericAPIServer service IP to "172.30.0.1" (read-write).
+W0314 12:50:12.453029   29798 controller.go:260] Resetting endpoints for master service "kubernetes" to &{{ } {kubernetes  default    0 0001-01-01 00:00:00 +0000 UTC <nil> <nil> map[] map[]} [{[{9.26.176.96 <nil>}] [] [{https 12000 TCP} {dns 8053 UDP} {dns-tcp 8053 TCP}]}]}
+I0314 12:50:12.460168   29798 plugin.go:27] Route plugin initialized with suffix=router.default.svc.cluster.local
+I0314 12:50:12.517644   29798 master.go:249] Started Kubernetes API at 127.0.0.1:12000/api/v1
+I0314 12:50:12.517651   29798 master.go:249] Started Kubernetes API Extensions at 127.0.0.1:12000/apis/extensions/v1beta1
+I0314 12:50:12.517655   29798 master.go:249] Started Origin API at 127.0.0.1:12000/oapi/v1
+I0314 12:50:12.517657   29798 master.go:249] Started OAuth2 API at 127.0.0.1:12000/oauth
+I0314 12:50:12.517660   29798 master.go:249] Started Login endpoint at 127.0.0.1:12000/login
+I0314 12:50:12.517663   29798 master.go:249] Started Web Console 127.0.0.1:12000/console/
+I0314 12:50:12.517665   29798 master.go:249] Started Swagger Schema API at 127.0.0.1:12000/swaggerapi/
+I0314 12:50:12.517658   29798 net.go:105] Got error &net.OpError{Op:"dial", Net:"tcp4", Source:net.Addr(nil), Addr:(*net.TCPAddr)(0xc820f7baa0), Err:(*os.SyscallError)(0xc820eee000)}, trying again: "127.0.0.1:12000"
+I0314 12:50:12.666248   29798 ensure.go:177] No cluster policy found.  Creating bootstrap policy based on: /tmp/openshift/test-integration/openshift.local.config/master/policy.json
+I0314 12:50:12.666339   29798 decoder.go:141] decoding stream as JSON
+I0314 12:50:13.319703   29798 ensure.go:167] Created default security context constraint privileged
+I0314 12:50:13.327441   29798 ensure.go:167] Created default security context constraint nonroot
+I0314 12:50:13.331471   29798 ensure.go:167] Created default security context constraint hostmount-anyuid
+I0314 12:50:13.335382   29798 ensure.go:167] Created default security context constraint hostaccess
+I0314 12:50:13.338164   29798 ensure.go:167] Created default security context constraint restricted
+I0314 12:50:13.346476   29798 ensure.go:167] Created default security context constraint anyuid
+I0314 12:50:13.668004   29798 trace.go:57] Trace "Create /oapi/v1/namespaces/default/rolebindings" (started 2016-03-14 12:50:13.352692 -0400 EDT):
+[7µs] [7µs] About to convert to expected version
+[69µs] [62µs] Conversion done
+[213.069ms] [213ms] About to store object in database
+[315.131ms] [102.062ms] Object stored in database
+[315.138ms] [7µs] Self-link added
+[315.283ms] [145µs] END
+I0314 12:50:13.798702   29798 ensure.go:84] Added build-controller service accounts to the system:build-controller cluster role: <nil>
+I0314 12:50:13.862396   29798 ensure.go:84] Added daemonset-controller service accounts to the system:daemonset-controller cluster role: <nil>
+I0314 12:50:13.929631   29798 ensure.go:84] Added deployment-controller service accounts to the system:deployment-controller cluster role: <nil>
+I0314 12:50:13.989843   29798 ensure.go:84] Added hpa-controller service accounts to the system:hpa-controller cluster role: <nil>
+I0314 12:50:14.053386   29798 ensure.go:84] Added job-controller service accounts to the system:job-controller cluster role: <nil>
+I0314 12:50:14.120109   29798 ensure.go:84] Added pv-binder-controller service accounts to the system:pv-binder-controller cluster role: <nil>
+I0314 12:50:14.204726   29798 ensure.go:84] Added pv-provisioner-controller service accounts to the system:pv-provisioner-controller cluster role: <nil>
+I0314 12:50:14.270722   29798 ensure.go:84] Added pv-recycler-controller service accounts to the system:pv-recycler-controller cluster role: <nil>
+I0314 12:50:14.335192   29798 ensure.go:84] Added replication-controller service accounts to the system:replication-controller cluster role: <nil>
+W0314 12:50:14.514758   29798 run_components.go:162] Binding DNS on port 8053 instead of 53 (you may need to run as root and update your config), using 127.0.0.1:8053 which will not resolve from all locations
+I0314 12:50:14.514866   29798 net.go:105] Got error &net.OpError{Op:"dial", Net:"tcp", Source:net.Addr(nil), Addr:(*net.TCPAddr)(0xc8225727e0), Err:(*os.SyscallError)(0xc821c9f480)}, trying again: "127.0.0.1:8053"
+2016-03-14 12:50:14.515465 I | skydns: ready for queries on cluster.local. for tcp4://127.0.0.1:8053 [rcache 0]
+2016-03-14 12:50:14.515488 I | skydns: ready for queries on cluster.local. for udp4://127.0.0.1:8053 [rcache 0]
+I0314 12:50:14.615129   29798 run_components.go:182] DNS listening at 127.0.0.1:8053
+I0314 12:50:14.615485   29798 start_master.go:529] Controllers starting (*)
+I0314 12:50:14.615895   29798 loader.go:242] Config loaded from file /tmp/openshift/test-integration/openshift.local.config/master/admin.kubeconfig
+I0314 12:50:14.616491   29798 loader.go:242] Config loaded from file /tmp/openshift/test-integration/openshift.local.config/master/admin.kubeconfig
+I0314 12:50:14.709933   29798 loader.go:242] Config loaded from file /tmp/openshift/test-integration/openshift.local.config/master/admin.kubeconfig
+I0314 12:50:14.710535   29798 loader.go:242] Config loaded from file /tmp/openshift/test-integration/openshift.local.config/master/admin.kubeconfig
+I0314 12:50:14.902307   29798 loader.go:242] Config loaded from file /tmp/openshift/test-integration/openshift.local.config/master/admin.kubeconfig
+I0314 12:50:14.902892   29798 loader.go:242] Config loaded from file /tmp/openshift/test-integration/openshift.local.config/master/admin.kubeconfig
+I0314 12:50:14.903728   29798 loader.go:242] Config loaded from file /tmp/openshift/test-integration/openshift.local.config/master/admin.kubeconfig
+I0314 12:50:14.904295   29798 loader.go:242] Config loaded from file /tmp/openshift/test-integration/openshift.local.config/master/admin.kubeconfig
+I0314 12:50:14.905149   29798 loader.go:242] Config loaded from file /tmp/openshift/test-integration/openshift.local.config/master/admin.kubeconfig
+I0314 12:50:14.905719   29798 loader.go:242] Config loaded from file /tmp/openshift/test-integration/openshift.local.config/master/admin.kubeconfig
+Created project integration
+I0314 12:50:14.947207   29798 create_dockercfg_secrets.go:161] View of ServiceAccount openshift-infra/deployment-controller is not up to date, skipping dockercfg creation
+I0314 12:50:15.079940   29798 create_dockercfg_secrets.go:161] View of ServiceAccount openshift-infra/hpa-controller is not up to date, skipping dockercfg creation
+I0314 12:50:15.088981   29798 anyauthpassword.go:34] Got userIdentityMapping: &user.DefaultInfo{Name:"peon", UID:"d351edbc-ea04-11e5-a70f-02000000038c", Groups:[]string(nil)}
+I0314 12:50:15.091658   29798 cluster.go:52] waiting for resourceVersion 4053 to be distributed
+I0314 12:50:15.092304   29798 cluster.go:63] resourceVersion 4053 was distributed to 1 etcd cluster members (out of 1)
+I0314 12:50:15.164436   29798 create_dockercfg_secrets.go:161] View of ServiceAccount openshift-infra/job-controller is not up to date, skipping dockercfg creation
+I0314 12:50:15.261654   29798 create_dockercfg_secrets.go:161] View of ServiceAccount openshift-infra/pv-binder-controller is not up to date, skipping dockercfg creation
+I0314 12:50:15.343271   29798 create_dockercfg_secrets.go:161] View of ServiceAccount openshift-infra/pv-provisioner-controller is not up to date, skipping dockercfg creation
+I0314 12:50:15.432427   29798 create_dockercfg_secrets.go:161] View of ServiceAccount openshift-infra/pv-recycler-controller is not up to date, skipping dockercfg creation
+I0314 12:50:15.485494   29798 create_dockercfg_secrets.go:161] View of ServiceAccount openshift-infra/replication-controller is not up to date, skipping dockercfg creation
+I0314 12:50:15.572417   29798 create_dockercfg_secrets.go:161] View of ServiceAccount default/default is not up to date, skipping dockercfg creation
+I0314 12:50:15.651883   29798 create_dockercfg_secrets.go:161] View of ServiceAccount default/builder is not up to date, skipping dockercfg creation
+I0314 12:50:15.699948   29798 nodecontroller.go:134] Sending events to api server.
+I0314 12:50:15.700058   29798 factory.go:140] Creating scheduler from algorithm provider 'DefaultProvider'
+I0314 12:50:15.700067   29798 factory.go:186] creating scheduler with fit predicates 'map[NoVolumeZoneConflict:{} MatchNodeSelector:{} HostName:{} PodFitsHostPorts:{} PodFitsResources:{} NoDiskConflict:{}]' and priority functions 'map[LeastRequestedPriority:{} BalancedResourceAllocation:{} SelectorSpreadPriority:{}]
+I0314 12:50:15.700134   29798 resource_quota_controller.go:132] Resource quota controller queued all resource quota for full calculation of usage
+I0314 12:50:15.700496   29798 persistentvolume_claim_binder_controller.go:420] Starting PersistentVolumeClaimBinder
+I0314 12:50:15.700547   29798 plugins.go:273] Loaded volume plugin "kubernetes.io/host-path"
+I0314 12:50:15.700558   29798 plugins.go:273] Loaded volume plugin "kubernetes.io/nfs"
+I0314 12:50:15.700567   29798 plugins.go:273] Loaded volume plugin "kubernetes.io/aws-ebs"
+I0314 12:50:15.700577   29798 plugins.go:273] Loaded volume plugin "kubernetes.io/gce-pd"
+I0314 12:50:15.700587   29798 plugins.go:273] Loaded volume plugin "kubernetes.io/cinder"
+I0314 12:50:15.700596   29798 persistentvolume_recycler_controller.go:322] Starting PersistentVolumeRecycler
+I0314 12:50:15.700603   29798 start_master.go:590] Started Kubernetes Controllers
+I0314 12:50:15.701198   29798 replication_controller.go:185] Starting RC Manager
+I0314 12:50:15.738138   29798 factory.go:466] Checking for deleted builds
+I0314 12:50:15.738461   29798 factory.go:551] Checking for deleted build pods
+I0314 12:50:15.740761   29798 controller.go:180] Starting Daemon Sets controller manager
+I0314 12:50:15.967443   29798 endpoints_controller.go:255] Finished syncing service "default/kubernetes" endpoints. (0)
+I0314 12:50:16.149433   29798 loader.go:242] Config loaded from file /tmp/openshift/test-integration/openshift.local.config/master/openshift-master.kubeconfig
+I0314 12:50:16.150056   29798 loader.go:242] Config loaded from file /tmp/openshift/test-integration/openshift.local.config/master/openshift-master.kubeconfig
+I0314 12:50:16.150756   29798 start_master.go:609] Started Origin Controllers
+I0314 12:50:16.151694   29798 scheduler.go:73] DEBUG: scheduler: queue (0):
+ []controller.bucket{controller.bucket{}, controller.bucket{}, controller.bucket{}}
+I0314 12:50:16.151753   29798 scheduler.go:78] DEBUG: scheduler: position: 1 3
+I0314 12:50:16.151759   29798 scheduler.go:55] DEBUG: scheduler: waiting for limit
+I0314 12:50:16.190253   29798 admission.go:130] ClusterResourceOverride is looking at creating pod limitless in project integration
+I0314 12:50:16.190267   29798 admission.go:146] ClusterResourceOverride: initial pod limits are: api.ResourceRequirements{Limits:api.ResourceList{"cpu":resource.Quantity{Amount:1.000, Format:"DecimalSI"}, "memory":resource.Quantity{Amount:2147483648.000, Format:"BinarySI"}}, Requests:api.ResourceList{"memory":resource.Quantity{Amount:2147483648.000, Format:"BinarySI"}, "cpu":resource.Quantity{Amount:1.000, Format:"DecimalSI"}}}
+I0314 12:50:16.190307   29798 admission.go:150] ClusterResourceOverride: pod limits after LimitRanger are: api.ResourceRequirements{Limits:api.ResourceList{"cpu":resource.Quantity{Amount:1.000, Format:"DecimalSI"}, "memory":resource.Quantity{Amount:2147483648.000, Format:"BinarySI"}}, Requests:api.ResourceList{"memory":resource.Quantity{Amount:2147483648.000, Format:"BinarySI"}, "cpu":resource.Quantity{Amount:1.000, Format:"DecimalSI"}}}
+I0314 12:50:16.190334   29798 admission.go:175] ClusterResourceOverride: pod limits after overrides are: api.ResourceRequirements{Limits:api.ResourceList{"cpu":resource.Quantity{Amount:2.00000, Format:"DecimalSI"}, "memory":resource.Quantity{Amount:2147483648.000, Format:"BinarySI"}}, Requests:api.ResourceList{"memory":resource.Quantity{Amount:1073741824.00000, Format:"BinarySI"}, "cpu":resource.Quantity{Amount:1.0000000, Format:"DecimalSI"}}}
+I0314 12:50:16.208767   29798 scheduler.go:73] DEBUG: scheduler: queue (1):
+ []controller.bucket{controller.bucket{}, controller.bucket{}, controller.bucket{}}
+I0314 12:50:16.208785   29798 scheduler.go:78] DEBUG: scheduler: position: 2 3
+I0314 12:50:16.208791   29798 scheduler.go:55] DEBUG: scheduler: waiting for limit
+--- FAIL: TestClusterResourceOverridePlugin (3.83s)
+	buildcontroller_test.go:326: unexpected error: pods "limitless" is forbidden: no API token found for service account integration/default, retry after the token is automatically created and added to the service account
+FAIL
+[INFO] Dumping etcd contents to /tmp/openshift/test-integration//artifacts/TestClusterResourceOverridePlugin-etcd_dump.json
+
+Running TestConcurrentBuildConfigControllers...
+ok      TestConcurrentBuildConfigControllers
+Running TestConcurrentBuildControllers...
+ok      TestConcurrentBuildControllers
+Running TestConcurrentBuildImageChangeTriggerControllers...
+ok      TestConcurrentBuildImageChangeTriggerControllers
+Running TestConcurrentBuildPodControllers...
+ok      TestConcurrentBuildPodControllers
+Running TestDNS...
+ok      TestDNS
+Running TestDeployScale...
+ok      TestDeployScale
+Running TestDiagNodeConditions...
+ok      TestDiagNodeConditions
+Running TestEnforcingServiceAccount...
+ok      TestEnforcingServiceAccount
+Running TestExtensionsAPIDeletion...
+ok      TestExtensionsAPIDeletion
+Running TestExtensionsAPIDisabled...
+ok      TestExtensionsAPIDisabled
+Running TestExternalKube...
+ok      TestExternalKube
+Running TestGroupCommands...
+ok      TestGroupCommands
+Running TestImageStreamCreate...
+ok      TestImageStreamCreate
+Running TestImageStreamImport...
+ok      TestImageStreamImport
+Running TestImageStreamImportAuthenticated...
+ok      TestImageStreamImportAuthenticated
+Running TestImageStreamImportDockerHub...
+ok      TestImageStreamImportDockerHub
+Running TestImageStreamImportQuayIO...
+ok      TestImageStreamImportQuayIO
+Running TestImageStreamImportRedHatRegistry...
+ok      TestImageStreamImportRedHatRegistry
+Running TestImageStreamImportScheduled...
+ok      TestImageStreamImportScheduled
+Running TestImageStreamList...
+ok      TestImageStreamList
+Running TestImageStreamMappingCreate...
+ok      TestImageStreamMappingCreate
+Running TestImageStreamTagLifecycleHook...
+ok      TestImageStreamTagLifecycleHook
+Running TestKubernetesAdmissionPluginConfigFile...
+ok      TestKubernetesAdmissionPluginConfigFile
+Running TestKubernetesAdmissionPluginEmbeddedConfig...
+ok      TestKubernetesAdmissionPluginEmbeddedConfig
+Running TestKubernetesAdmissionPluginOrderOverride...
+ok      TestKubernetesAdmissionPluginOrderOverride
+Running TestLeaderLeaseAcquire...
+ok      TestLeaderLeaseAcquire
+Running TestLeaderLeaseReacquire...
+ok      TestLeaderLeaseReacquire
+Running TestLeaderLeaseSwapWhileWaiting...
+ok      TestLeaderLeaseSwapWhileWaiting
+Running TestLeaderLeaseWait...
+ok      TestLeaderLeaseWait
+Running TestLogin...
+ok      TestLogin
+Running TestMultipleImageChangeBuildTriggers...
+ok      TestMultipleImageChangeBuildTriggers
+Running TestNewAppAddArguments...
+ok      TestNewAppAddArguments
+Running TestNewAppBuildConfigEnvVarsAndSecrets...
+ok      TestNewAppBuildConfigEnvVarsAndSecrets
+Running TestNewAppDetectSource...
+ok      TestNewAppDetectSource
+Running TestNewAppNewBuildEnvVars...
+ok      TestNewAppNewBuildEnvVars
+Running TestNewAppResolve...
+ok      TestNewAppResolve
+Running TestNewAppRunAll...
+ok      TestNewAppRunAll
+Running TestNewAppRunBuilds...
+ok      TestNewAppRunBuilds
+Running TestNodeAuth...
+ok      TestNodeAuth
+Running TestOAuthBasicAuthPassword...
+ok      TestOAuthBasicAuthPassword
+Running TestOAuthDisabled...
+ok      TestOAuthDisabled
+Running TestOAuthHTPasswd...
+ok      TestOAuthHTPasswd
+Running TestOAuthLDAP...
+ok      TestOAuthLDAP
+Running TestOAuthRequestHeader...
+ok      TestOAuthRequestHeader
+Running TestOAuthStorage...
+ok      TestOAuthStorage
+Running TestOldLocalResourceAccessReviewEndpoint...
+ok      TestOldLocalResourceAccessReviewEndpoint
+Running TestOldLocalSubjectAccessReviewEndpoint...
+ok      TestOldLocalSubjectAccessReviewEndpoint
+Running TestOpenshiftAdmissionPluginConfigFile...
+ok      TestOpenshiftAdmissionPluginConfigFile
+Running TestOpenshiftAdmissionPluginEmbeddedConfig...
+ok      TestOpenshiftAdmissionPluginEmbeddedConfig
+Running TestOpenshiftAdmissionPluginOrderOverride...
+ok      TestOpenshiftAdmissionPluginOrderOverride
+Running TestPolicyBasedRestrictionOfBuildConfigCreateAndInstantiateByStrategy...
+ok      TestPolicyBasedRestrictionOfBuildConfigCreateAndInstantiateByStrategy
+Running TestPolicyBasedRestrictionOfBuildCreateAndCloneByStrategy...
+ok      TestPolicyBasedRestrictionOfBuildCreateAndCloneByStrategy
+Running TestPolicyCommands...
+ok      TestPolicyCommands
+Running TestProjectIsNamespace...
+ok      TestProjectIsNamespace
+Running TestProjectMustExist...
+ok      TestProjectMustExist
+Running TestProjectRequestLimitEmptyConfig...
+ok      TestProjectRequestLimitEmptyConfig
+Running TestProjectRequestLimitMultiLevelConfig...
+ok      TestProjectRequestLimitMultiLevelConfig
+Running TestProjectRequestLimitSingleConfig...
+ok      TestProjectRequestLimitSingleConfig
+Running TestRegistryClientConnect...
+ok      TestRegistryClientConnect
+Running TestRegistryClientConnectPulpRegistry...
+ok      TestRegistryClientConnectPulpRegistry
+Running TestRegistryClientDockerHubV1...
+ok      TestRegistryClientDockerHubV1
+Running TestRegistryClientDockerHubV2...
+ok      TestRegistryClientDockerHubV2
+Running TestRegistryClientImageV1...
+ok      TestRegistryClientImageV1
+Running TestRegistryClientImageV2...
+ok      TestRegistryClientImageV2
+Running TestRegistryClientQuayIOImage...
+ok      TestRegistryClientQuayIOImage
+Running TestRegistryClientRegistryNotFound...
+ok      TestRegistryClientRegistryNotFound
+Running TestRootAPIPaths...
+ok      TestRootAPIPaths
+Running TestRootRedirect...
+ok      TestRootRedirect
+Running TestRouter...
+failed  TestRouter
+I0314 12:56:01.334167   31563 plugins.go:46] Registered cloud provider "aws"
+I0314 12:56:01.334369   31563 plugins.go:46] Registered cloud provider "gce"
+I0314 12:56:01.334575   31563 plugins.go:46] Registered cloud provider "mesos"
+I0314 12:56:01.334633   31563 plugins.go:46] Registered cloud provider "openstack"
+I0314 12:56:01.334643   31563 plugins.go:46] Registered cloud provider "ovirt"
+I0314 12:56:01.334655   31563 plugins.go:46] Registered cloud provider "rackspace"
+I0314 12:56:01.335776   31563 plugins.go:62] Registered admission plugin "ServiceAccount"
+I0314 12:56:01.335805   31563 plugins.go:41] Registered credential provider "google-jwt-key"
+I0314 12:56:01.335815   31563 plugins.go:41] Registered credential provider "google-dockercfg"
+I0314 12:56:01.335824   31563 plugins.go:41] Registered credential provider "google-dockercfg-url"
+I0314 12:56:01.335828   31563 plugins.go:41] Registered credential provider "google-container-registry"
+I0314 12:56:01.348430   31563 plugins.go:62] Registered admission plugin "BuildDefaults"
+I0314 12:56:01.348445   31563 plugins.go:62] Registered admission plugin "BuildOverrides"
+I0314 12:56:01.348451   31563 plugins.go:62] Registered admission plugin "BuildByStrategy"
+I0314 12:56:01.348459   31563 plugins.go:62] Registered admission plugin "OriginNamespaceLifecycle"
+I0314 12:56:01.348467   31563 plugins.go:62] Registered admission plugin "OriginPodNodeEnvironment"
+I0314 12:56:01.348475   31563 plugins.go:62] Registered admission plugin "ProjectRequestLimit"
+I0314 12:56:01.348485   31563 plugins.go:62] Registered admission plugin "LimitRanger"
+I0314 12:56:01.348491   31563 plugins.go:62] Registered admission plugin "ClusterResourceOverride"
+I0314 12:56:01.348500   31563 plugins.go:62] Registered admission plugin "RunOnceDuration"
+I0314 12:56:01.348514   31563 plugins.go:62] Registered admission plugin "SecurityContextConstraint"
+I0314 12:56:01.348521   31563 plugins.go:62] Registered admission plugin "SCCExecRestrictions"
+I0314 12:56:01.348526   31563 plugins.go:62] Registered admission plugin "AlwaysAdmit"
+I0314 12:56:01.348530   31563 plugins.go:62] Registered admission plugin "AlwaysPullImages"
+I0314 12:56:01.348537   31563 plugins.go:62] Registered admission plugin "DenyEscalatingExec"
+I0314 12:56:01.348544   31563 plugins.go:62] Registered admission plugin "DenyExecOnPrivileged"
+I0314 12:56:01.348548   31563 plugins.go:62] Registered admission plugin "NamespaceExists"
+I0314 12:56:01.348554   31563 plugins.go:62] Registered admission plugin "NamespaceLifecycle"
+I0314 12:56:01.348564   31563 plugins.go:62] Registered admission plugin "ResourceQuota"
+I0314 12:56:01.348572   31563 plugins.go:62] Registered admission plugin "AlwaysDeny"
+I0314 12:56:01.348610   31563 plugins.go:62] Registered admission plugin "InitialResources"
+I0314 12:56:01.348619   31563 plugins.go:62] Registered admission plugin "NamespaceAutoProvision"
+I0314 12:56:01.348626   31563 plugins.go:62] Registered admission plugin "PersistentVolumeLabel"
+I0314 12:56:01.348634   31563 plugins.go:62] Registered admission plugin "SecurityContextDeny"
+Started, serving at 9.26.176.96:8080
+Started, serving at 9.26.176.96:8888
+Started, serving at 9.26.176.96:8889
+Started, serving TLS at 9.26.176.96:8443
+Stopping listener at 9.26.176.96:8080
+Stopping listener at 9.26.176.96:8888
+Stopping listener at 9.26.176.96:8889
+Stopping listener at 9.26.176.96:8443
+--- FAIL: TestRouter (98.15s)
+	router_test.go:1102: error: Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused, attempt #1, retrying ...
+	router_test.go:1102: error: Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused, attempt #2, retrying ...
+	router_test.go:348: Unable to verify response: Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:352: TC non-secure failed! Response body "" did not match expected "Hello Pod!"
+	router_test.go:1102: error: Get http://0.0.0.0/test: dial tcp 0.0.0.0:80: getsockopt: connection refused, attempt #1, retrying ...
+	router_test.go:1102: error: Get http://0.0.0.0/test: dial tcp 0.0.0.0:80: getsockopt: connection refused, attempt #2, retrying ...
+	router_test.go:348: Unable to verify response: Get http://0.0.0.0/test: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:352: TC non-secure-path failed! Response body "" did not match expected "Hello Pod Path!"
+	router_test.go:1102: error: Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused, attempt #1, retrying ...
+	router_test.go:1102: error: Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused, attempt #2, retrying ...
+	router_test.go:348: Unable to verify response: Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:352: TC preferred-port failed! Response body "" did not match expected "Hello Pod!"
+	router_test.go:1102: error: Get https://0.0.0.0: dial tcp 0.0.0.0:443: getsockopt: connection refused, attempt #1, retrying ...
+	router_test.go:1102: error: Get https://0.0.0.0: dial tcp 0.0.0.0:443: getsockopt: connection refused, attempt #2, retrying ...
+	router_test.go:348: Unable to verify response: Get https://0.0.0.0: dial tcp 0.0.0.0:443: getsockopt: connection refused
+	router_test.go:352: TC edge termination failed! Response body "" did not match expected "Hello Pod!"
+	router_test.go:1102: error: Get https://0.0.0.0/test: dial tcp 0.0.0.0:443: getsockopt: connection refused, attempt #1, retrying ...
+	router_test.go:1102: error: Get https://0.0.0.0/test: dial tcp 0.0.0.0:443: getsockopt: connection refused, attempt #2, retrying ...
+	router_test.go:348: Unable to verify response: Get https://0.0.0.0/test: dial tcp 0.0.0.0:443: getsockopt: connection refused
+	router_test.go:352: TC edge termination path failed! Response body "" did not match expected "Hello Pod Path!"
+	router_test.go:1102: error: Get https://0.0.0.0: dial tcp 0.0.0.0:443: getsockopt: connection refused, attempt #1, retrying ...
+	router_test.go:1102: error: Get https://0.0.0.0: dial tcp 0.0.0.0:443: getsockopt: connection refused, attempt #2, retrying ...
+	router_test.go:348: Unable to verify response: Get https://0.0.0.0: dial tcp 0.0.0.0:443: getsockopt: connection refused
+	router_test.go:352: TC reencrypt failed! Response body "" did not match expected "Hello Pod Secure!"
+	router_test.go:1102: error: Get https://0.0.0.0/test: dial tcp 0.0.0.0:443: getsockopt: connection refused, attempt #1, retrying ...
+	router_test.go:1102: error: Get https://0.0.0.0/test: dial tcp 0.0.0.0:443: getsockopt: connection refused, attempt #2, retrying ...
+	router_test.go:348: Unable to verify response: Get https://0.0.0.0/test: dial tcp 0.0.0.0:443: getsockopt: connection refused
+	router_test.go:352: TC reencrypt path failed! Response body "" did not match expected "Hello Pod Path Secure!"
+	router_test.go:1102: error: Get https://0.0.0.0: dial tcp 0.0.0.0:443: getsockopt: connection refused, attempt #1, retrying ...
+	router_test.go:1102: error: Get https://0.0.0.0: dial tcp 0.0.0.0:443: getsockopt: connection refused, attempt #2, retrying ...
+	router_test.go:348: Unable to verify response: Get https://0.0.0.0: dial tcp 0.0.0.0:443: getsockopt: connection refused
+	router_test.go:352: TC passthrough termination failed! Response body "" did not match expected "Hello Pod Secure!"
+	router_test.go:1102: error: websocket.Dial ws://0.0.0.0:80/echo: dial tcp 0.0.0.0:80: getsockopt: connection refused, attempt #1, retrying ...
+	router_test.go:1102: error: websocket.Dial ws://0.0.0.0:80/echo: dial tcp 0.0.0.0:80: getsockopt: connection refused, attempt #2, retrying ...
+	router_test.go:348: Unable to verify response: websocket.Dial ws://0.0.0.0:80/echo: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:352: TC websocket unsecure failed! Response body "" did not match expected "hello-websocket-unsecure"
+	router_test.go:1102: error: websocket.Dial wss://0.0.0.0:443/echo: dial tcp 0.0.0.0:443: getsockopt: connection refused, attempt #1, retrying ...
+	router_test.go:1102: error: websocket.Dial wss://0.0.0.0:443/echo: dial tcp 0.0.0.0:443: getsockopt: connection refused, attempt #2, retrying ...
+	router_test.go:348: Unable to verify response: websocket.Dial wss://0.0.0.0:443/echo: dial tcp 0.0.0.0:443: getsockopt: connection refused
+	router_test.go:352: TC ws edge termination failed! Response body "" did not match expected "hello-websocket-edge"
+	router_test.go:1102: error: websocket.Dial wss://0.0.0.0:443/echo: dial tcp 0.0.0.0:443: getsockopt: connection refused, attempt #1, retrying ...
+	router_test.go:1102: error: websocket.Dial wss://0.0.0.0:443/echo: dial tcp 0.0.0.0:443: getsockopt: connection refused, attempt #2, retrying ...
+	router_test.go:348: Unable to verify response: websocket.Dial wss://0.0.0.0:443/echo: dial tcp 0.0.0.0:443: getsockopt: connection refused
+	router_test.go:352: TC ws passthrough termination failed! Response body "" did not match expected "hello-websocket-passthrough"
+FAIL
+[INFO] Dumping etcd contents to /tmp/openshift/test-integration//artifacts/TestRouter-etcd_dump.json
+
+Running TestRouterDuplications...
+failed  TestRouterDuplications
+I0314 12:57:39.677514   31894 plugins.go:46] Registered cloud provider "aws"
+I0314 12:57:39.677758   31894 plugins.go:46] Registered cloud provider "gce"
+I0314 12:57:39.678030   31894 plugins.go:46] Registered cloud provider "mesos"
+I0314 12:57:39.678087   31894 plugins.go:46] Registered cloud provider "openstack"
+I0314 12:57:39.678098   31894 plugins.go:46] Registered cloud provider "ovirt"
+I0314 12:57:39.678107   31894 plugins.go:46] Registered cloud provider "rackspace"
+I0314 12:57:39.679385   31894 plugins.go:62] Registered admission plugin "ServiceAccount"
+I0314 12:57:39.679424   31894 plugins.go:41] Registered credential provider "google-jwt-key"
+I0314 12:57:39.679434   31894 plugins.go:41] Registered credential provider "google-dockercfg"
+I0314 12:57:39.679442   31894 plugins.go:41] Registered credential provider "google-dockercfg-url"
+I0314 12:57:39.679451   31894 plugins.go:41] Registered credential provider "google-container-registry"
+I0314 12:57:39.691567   31894 plugins.go:62] Registered admission plugin "BuildDefaults"
+I0314 12:57:39.691583   31894 plugins.go:62] Registered admission plugin "BuildOverrides"
+I0314 12:57:39.691590   31894 plugins.go:62] Registered admission plugin "BuildByStrategy"
+I0314 12:57:39.691605   31894 plugins.go:62] Registered admission plugin "OriginNamespaceLifecycle"
+I0314 12:57:39.691615   31894 plugins.go:62] Registered admission plugin "OriginPodNodeEnvironment"
+I0314 12:57:39.691621   31894 plugins.go:62] Registered admission plugin "ProjectRequestLimit"
+I0314 12:57:39.691634   31894 plugins.go:62] Registered admission plugin "LimitRanger"
+I0314 12:57:39.691638   31894 plugins.go:62] Registered admission plugin "ClusterResourceOverride"
+I0314 12:57:39.691646   31894 plugins.go:62] Registered admission plugin "RunOnceDuration"
+I0314 12:57:39.691662   31894 plugins.go:62] Registered admission plugin "SecurityContextConstraint"
+I0314 12:57:39.691667   31894 plugins.go:62] Registered admission plugin "SCCExecRestrictions"
+I0314 12:57:39.691675   31894 plugins.go:62] Registered admission plugin "AlwaysAdmit"
+I0314 12:57:39.691681   31894 plugins.go:62] Registered admission plugin "AlwaysPullImages"
+I0314 12:57:39.691688   31894 plugins.go:62] Registered admission plugin "DenyEscalatingExec"
+I0314 12:57:39.691695   31894 plugins.go:62] Registered admission plugin "DenyExecOnPrivileged"
+I0314 12:57:39.691702   31894 plugins.go:62] Registered admission plugin "NamespaceExists"
+I0314 12:57:39.691710   31894 plugins.go:62] Registered admission plugin "NamespaceLifecycle"
+I0314 12:57:39.691720   31894 plugins.go:62] Registered admission plugin "ResourceQuota"
+I0314 12:57:39.691729   31894 plugins.go:62] Registered admission plugin "AlwaysDeny"
+I0314 12:57:39.691770   31894 plugins.go:62] Registered admission plugin "InitialResources"
+I0314 12:57:39.691779   31894 plugins.go:62] Registered admission plugin "NamespaceAutoProvision"
+I0314 12:57:39.691786   31894 plugins.go:62] Registered admission plugin "PersistentVolumeLabel"
+I0314 12:57:39.691793   31894 plugins.go:62] Registered admission plugin "SecurityContextDeny"
+Started, serving at 9.26.176.96:8080
+Started, serving at 9.26.176.96:8888
+Started, serving at 9.26.176.96:8889
+Started, serving TLS at 9.26.176.96:8443
+Stopping listener at 9.26.176.96:8080
+Stopping listener at 9.26.176.96:8888
+Stopping listener at 9.26.176.96:8889
+Stopping listener at 9.26.176.96:8443
+--- FAIL: TestRouterDuplications (75.80s)
+	router_test.go:740: Unable to validate both routes in a duplicate service scenario.  Resp 1: Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused, Resp 2: Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+FAIL
+[INFO] Dumping etcd contents to /tmp/openshift/test-integration//artifacts/TestRouterDuplications-etcd_dump.json
+
+Running TestRouterHealthzEndpoint...
+failed  TestRouterHealthzEndpoint
+I0314 12:58:55.683424   32035 plugins.go:46] Registered cloud provider "aws"
+I0314 12:58:55.683660   32035 plugins.go:46] Registered cloud provider "gce"
+I0314 12:58:55.683893   32035 plugins.go:46] Registered cloud provider "mesos"
+I0314 12:58:55.683939   32035 plugins.go:46] Registered cloud provider "openstack"
+I0314 12:58:55.683947   32035 plugins.go:46] Registered cloud provider "ovirt"
+I0314 12:58:55.683957   32035 plugins.go:46] Registered cloud provider "rackspace"
+I0314 12:58:55.685160   32035 plugins.go:62] Registered admission plugin "ServiceAccount"
+I0314 12:58:55.685190   32035 plugins.go:41] Registered credential provider "google-jwt-key"
+I0314 12:58:55.685198   32035 plugins.go:41] Registered credential provider "google-dockercfg"
+I0314 12:58:55.685204   32035 plugins.go:41] Registered credential provider "google-dockercfg-url"
+I0314 12:58:55.685214   32035 plugins.go:41] Registered credential provider "google-container-registry"
+I0314 12:58:55.696206   32035 plugins.go:62] Registered admission plugin "BuildDefaults"
+I0314 12:58:55.696223   32035 plugins.go:62] Registered admission plugin "BuildOverrides"
+I0314 12:58:55.696231   32035 plugins.go:62] Registered admission plugin "BuildByStrategy"
+I0314 12:58:55.696242   32035 plugins.go:62] Registered admission plugin "OriginNamespaceLifecycle"
+I0314 12:58:55.696249   32035 plugins.go:62] Registered admission plugin "OriginPodNodeEnvironment"
+I0314 12:58:55.696257   32035 plugins.go:62] Registered admission plugin "ProjectRequestLimit"
+I0314 12:58:55.696265   32035 plugins.go:62] Registered admission plugin "LimitRanger"
+I0314 12:58:55.696271   32035 plugins.go:62] Registered admission plugin "ClusterResourceOverride"
+I0314 12:58:55.696279   32035 plugins.go:62] Registered admission plugin "RunOnceDuration"
+I0314 12:58:55.696292   32035 plugins.go:62] Registered admission plugin "SecurityContextConstraint"
+I0314 12:58:55.696298   32035 plugins.go:62] Registered admission plugin "SCCExecRestrictions"
+I0314 12:58:55.696304   32035 plugins.go:62] Registered admission plugin "AlwaysAdmit"
+I0314 12:58:55.696310   32035 plugins.go:62] Registered admission plugin "AlwaysPullImages"
+I0314 12:58:55.696318   32035 plugins.go:62] Registered admission plugin "DenyEscalatingExec"
+I0314 12:58:55.696323   32035 plugins.go:62] Registered admission plugin "DenyExecOnPrivileged"
+I0314 12:58:55.696329   32035 plugins.go:62] Registered admission plugin "NamespaceExists"
+I0314 12:58:55.696336   32035 plugins.go:62] Registered admission plugin "NamespaceLifecycle"
+I0314 12:58:55.696345   32035 plugins.go:62] Registered admission plugin "ResourceQuota"
+I0314 12:58:55.696352   32035 plugins.go:62] Registered admission plugin "AlwaysDeny"
+I0314 12:58:55.696376   32035 plugins.go:62] Registered admission plugin "InitialResources"
+I0314 12:58:55.696383   32035 plugins.go:62] Registered admission plugin "NamespaceAutoProvision"
+I0314 12:58:55.696389   32035 plugins.go:62] Registered admission plugin "PersistentVolumeLabel"
+I0314 12:58:55.696396   32035 plugins.go:62] Registered admission plugin "SecurityContextDeny"
+Started, serving at 9.26.176.96:8080
+Started, serving at 9.26.176.96:8888
+Started, serving at 9.26.176.96:8889
+Started, serving TLS at 9.26.176.96:8443
+Stopping listener at 9.26.176.96:8080
+Stopping listener at 9.26.176.96:8888
+Stopping listener at 9.26.176.96:8889
+Stopping listener at 9.26.176.96:8443
+--- FAIL: TestRouterHealthzEndpoint (160.06s)
+	router_test.go:1102: error: Get http://127.0.0.1:1936/healthz: dial tcp 127.0.0.1:1936: getsockopt: connection refused, attempt #1, retrying ...
+	router_test.go:1102: error: Get http://127.0.0.1:1936/healthz: dial tcp 127.0.0.1:1936: getsockopt: connection refused, attempt #2, retrying ...
+	router_test.go:887: Test with "stats port enabled" unable to verify response: Get http://127.0.0.1:1936/healthz: dial tcp 127.0.0.1:1936: getsockopt: connection refused
+	router_test.go:891: TestRouterHealthzEndpoint with "stats port enabled" failed! No Response body.
+	router_test.go:1102: error: Get http://127.0.0.1:1936/healthz: dial tcp 127.0.0.1:1936: getsockopt: connection refused, attempt #1, retrying ...
+	router_test.go:1102: error: Get http://127.0.0.1:1936/healthz: dial tcp 127.0.0.1:1936: getsockopt: connection refused, attempt #2, retrying ...
+	router_test.go:887: Test with "stats port disabled" unable to verify response: Get http://127.0.0.1:1936/healthz: dial tcp 127.0.0.1:1936: getsockopt: connection refused
+	router_test.go:891: TestRouterHealthzEndpoint with "stats port disabled" failed! No Response body.
+	router_test.go:1102: error: Get http://127.0.0.1:6391/healthz: dial tcp 127.0.0.1:6391: getsockopt: connection refused, attempt #1, retrying ...
+	router_test.go:1102: error: Get http://127.0.0.1:6391/healthz: dial tcp 127.0.0.1:6391: getsockopt: connection refused, attempt #2, retrying ...
+	router_test.go:887: Test with "custom stats port" unable to verify response: Get http://127.0.0.1:6391/healthz: dial tcp 127.0.0.1:6391: getsockopt: connection refused
+	router_test.go:891: TestRouterHealthzEndpoint with "custom stats port" failed! No Response body.
+FAIL
+[INFO] Dumping etcd contents to /tmp/openshift/test-integration//artifacts/TestRouterHealthzEndpoint-etcd_dump.json
+
+Running TestRouterPathSpecificity...
+failed  TestRouterPathSpecificity
+I0314 13:01:35.941789   32340 plugins.go:46] Registered cloud provider "aws"
+I0314 13:01:35.942016   32340 plugins.go:46] Registered cloud provider "gce"
+I0314 13:01:35.942231   32340 plugins.go:46] Registered cloud provider "mesos"
+I0314 13:01:35.942273   32340 plugins.go:46] Registered cloud provider "openstack"
+I0314 13:01:35.942279   32340 plugins.go:46] Registered cloud provider "ovirt"
+I0314 13:01:35.942287   32340 plugins.go:46] Registered cloud provider "rackspace"
+I0314 13:01:35.944291   32340 plugins.go:62] Registered admission plugin "ServiceAccount"
+I0314 13:01:35.944333   32340 plugins.go:41] Registered credential provider "google-jwt-key"
+I0314 13:01:35.944347   32340 plugins.go:41] Registered credential provider "google-dockercfg"
+I0314 13:01:35.944352   32340 plugins.go:41] Registered credential provider "google-dockercfg-url"
+I0314 13:01:35.944362   32340 plugins.go:41] Registered credential provider "google-container-registry"
+I0314 13:01:35.969275   32340 plugins.go:62] Registered admission plugin "BuildDefaults"
+I0314 13:01:35.969297   32340 plugins.go:62] Registered admission plugin "BuildOverrides"
+I0314 13:01:35.969304   32340 plugins.go:62] Registered admission plugin "BuildByStrategy"
+I0314 13:01:35.969315   32340 plugins.go:62] Registered admission plugin "OriginNamespaceLifecycle"
+I0314 13:01:35.969326   32340 plugins.go:62] Registered admission plugin "OriginPodNodeEnvironment"
+I0314 13:01:35.969333   32340 plugins.go:62] Registered admission plugin "ProjectRequestLimit"
+I0314 13:01:35.969348   32340 plugins.go:62] Registered admission plugin "LimitRanger"
+I0314 13:01:35.969358   32340 plugins.go:62] Registered admission plugin "ClusterResourceOverride"
+I0314 13:01:35.969366   32340 plugins.go:62] Registered admission plugin "RunOnceDuration"
+I0314 13:01:35.969393   32340 plugins.go:62] Registered admission plugin "SecurityContextConstraint"
+I0314 13:01:35.969404   32340 plugins.go:62] Registered admission plugin "SCCExecRestrictions"
+I0314 13:01:35.969408   32340 plugins.go:62] Registered admission plugin "AlwaysAdmit"
+I0314 13:01:35.969418   32340 plugins.go:62] Registered admission plugin "AlwaysPullImages"
+I0314 13:01:35.969430   32340 plugins.go:62] Registered admission plugin "DenyEscalatingExec"
+I0314 13:01:35.969440   32340 plugins.go:62] Registered admission plugin "DenyExecOnPrivileged"
+I0314 13:01:35.969445   32340 plugins.go:62] Registered admission plugin "NamespaceExists"
+I0314 13:01:35.969456   32340 plugins.go:62] Registered admission plugin "NamespaceLifecycle"
+I0314 13:01:35.969465   32340 plugins.go:62] Registered admission plugin "ResourceQuota"
+I0314 13:01:35.969486   32340 plugins.go:62] Registered admission plugin "AlwaysDeny"
+I0314 13:01:35.969516   32340 plugins.go:62] Registered admission plugin "InitialResources"
+I0314 13:01:35.969529   32340 plugins.go:62] Registered admission plugin "NamespaceAutoProvision"
+I0314 13:01:35.969535   32340 plugins.go:62] Registered admission plugin "PersistentVolumeLabel"
+I0314 13:01:35.969540   32340 plugins.go:62] Registered admission plugin "SecurityContextDeny"
+Started, serving at 9.26.176.96:8080
+Started, serving at 9.26.176.96:8888
+Started, serving at 9.26.176.96:8889
+Started, serving TLS at 9.26.176.96:8443
+Stopping listener at 9.26.176.96:8080
+Stopping listener at 9.26.176.96:8888
+Stopping listener at 9.26.176.96:8889
+Stopping listener at 9.26.176.96:8443
+--- FAIL: TestRouterPathSpecificity (91.19s)
+	router_test.go:466: unexpected response: "Get http://0.0.0.0/test: dial tcp 0.0.0.0:80: getsockopt: connection refused"
+	router_test.go:501: unexpected response: "Get http://0.0.0.0/test: dial tcp 0.0.0.0:80: getsockopt: connection refused"
+	router_test.go:525: unexpected response: "Get http://0.0.0.0/test: dial tcp 0.0.0.0:80: getsockopt: connection refused"
+	router_test.go:528: unexpected response: "Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused"
+	router_test.go:557: unexpected response: "Get http://0.0.0.0/test: dial tcp 0.0.0.0:80: getsockopt: connection refused"
+	router_test.go:560: unexpected response: "Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused"
+	router_test.go:583: unexpected response: "Get http://0.0.0.0/test: dial tcp 0.0.0.0:80: getsockopt: connection refused"
+	router_test.go:586: unexpected response: "Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused"
+	router_test.go:609: unexpected response: "Get http://0.0.0.0/test: dial tcp 0.0.0.0:80: getsockopt: connection refused"
+	router_test.go:612: unexpected response: "Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused"
+FAIL
+[INFO] Dumping etcd contents to /tmp/openshift/test-integration//artifacts/TestRouterPathSpecificity-etcd_dump.json
+
+Running TestRouterReloadCoalesce...
+failed  TestRouterReloadCoalesce
+I0314 13:03:07.370624   32518 plugins.go:46] Registered cloud provider "aws"
+I0314 13:03:07.370834   32518 plugins.go:46] Registered cloud provider "gce"
+I0314 13:03:07.371037   32518 plugins.go:46] Registered cloud provider "mesos"
+I0314 13:03:07.371090   32518 plugins.go:46] Registered cloud provider "openstack"
+I0314 13:03:07.371099   32518 plugins.go:46] Registered cloud provider "ovirt"
+I0314 13:03:07.371111   32518 plugins.go:46] Registered cloud provider "rackspace"
+I0314 13:03:07.372266   32518 plugins.go:62] Registered admission plugin "ServiceAccount"
+I0314 13:03:07.372295   32518 plugins.go:41] Registered credential provider "google-jwt-key"
+I0314 13:03:07.372304   32518 plugins.go:41] Registered credential provider "google-dockercfg"
+I0314 13:03:07.372334   32518 plugins.go:41] Registered credential provider "google-dockercfg-url"
+I0314 13:03:07.372341   32518 plugins.go:41] Registered credential provider "google-container-registry"
+I0314 13:03:07.385158   32518 plugins.go:62] Registered admission plugin "BuildDefaults"
+I0314 13:03:07.385172   32518 plugins.go:62] Registered admission plugin "BuildOverrides"
+I0314 13:03:07.385179   32518 plugins.go:62] Registered admission plugin "BuildByStrategy"
+I0314 13:03:07.385189   32518 plugins.go:62] Registered admission plugin "OriginNamespaceLifecycle"
+I0314 13:03:07.385197   32518 plugins.go:62] Registered admission plugin "OriginPodNodeEnvironment"
+I0314 13:03:07.385206   32518 plugins.go:62] Registered admission plugin "ProjectRequestLimit"
+I0314 13:03:07.385217   32518 plugins.go:62] Registered admission plugin "LimitRanger"
+I0314 13:03:07.385223   32518 plugins.go:62] Registered admission plugin "ClusterResourceOverride"
+I0314 13:03:07.385233   32518 plugins.go:62] Registered admission plugin "RunOnceDuration"
+I0314 13:03:07.385250   32518 plugins.go:62] Registered admission plugin "SecurityContextConstraint"
+I0314 13:03:07.385259   32518 plugins.go:62] Registered admission plugin "SCCExecRestrictions"
+I0314 13:03:07.385263   32518 plugins.go:62] Registered admission plugin "AlwaysAdmit"
+I0314 13:03:07.385269   32518 plugins.go:62] Registered admission plugin "AlwaysPullImages"
+I0314 13:03:07.385279   32518 plugins.go:62] Registered admission plugin "DenyEscalatingExec"
+I0314 13:03:07.385285   32518 plugins.go:62] Registered admission plugin "DenyExecOnPrivileged"
+I0314 13:03:07.385293   32518 plugins.go:62] Registered admission plugin "NamespaceExists"
+I0314 13:03:07.385301   32518 plugins.go:62] Registered admission plugin "NamespaceLifecycle"
+I0314 13:03:07.385311   32518 plugins.go:62] Registered admission plugin "ResourceQuota"
+I0314 13:03:07.385318   32518 plugins.go:62] Registered admission plugin "AlwaysDeny"
+I0314 13:03:07.385342   32518 plugins.go:62] Registered admission plugin "InitialResources"
+I0314 13:03:07.385349   32518 plugins.go:62] Registered admission plugin "NamespaceAutoProvision"
+I0314 13:03:07.385356   32518 plugins.go:62] Registered admission plugin "PersistentVolumeLabel"
+I0314 13:03:07.385361   32518 plugins.go:62] Registered admission plugin "SecurityContextDeny"
+Started, serving at 9.26.176.96:8080
+Started, serving at 9.26.176.96:8888
+Started, serving at 9.26.176.96:8889
+Started, serving TLS at 9.26.176.96:8443
+Stopping listener at 9.26.176.96:8080
+Stopping listener at 9.26.176.96:8888
+Stopping listener at 9.26.176.96:8889
+Stopping listener at 9.26.176.96:8443
+--- FAIL: TestRouterReloadCoalesce (63.74s)
+	router_test.go:1419: Unable to verify response: Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1427: Unable to verify response for "www.example-coalesce-1.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1431: Route www.example-coalesce-1.test failed! Response body "" did not match expected "Hello Pod!"
+	router_test.go:1427: Unable to verify response for "www.example-coalesce-2.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1431: Route www.example-coalesce-2.test failed! Response body "" did not match expected "Hello Pod!"
+	router_test.go:1427: Unable to verify response for "www.example-coalesce-3.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1431: Route www.example-coalesce-3.test failed! Response body "" did not match expected "Hello Pod!"
+	router_test.go:1427: Unable to verify response for "www.example-coalesce-4.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1431: Route www.example-coalesce-4.test failed! Response body "" did not match expected "Hello Pod!"
+	router_test.go:1427: Unable to verify response for "www.example-coalesce-5.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1431: Route www.example-coalesce-5.test failed! Response body "" did not match expected "Hello Pod!"
+	router_test.go:1427: Unable to verify response for "www.example-coalesce-6.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1431: Route www.example-coalesce-6.test failed! Response body "" did not match expected "Hello Pod!"
+	router_test.go:1427: Unable to verify response for "www.example-coalesce-7.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1431: Route www.example-coalesce-7.test failed! Response body "" did not match expected "Hello Pod!"
+	router_test.go:1427: Unable to verify response for "www.example-coalesce-8.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1431: Route www.example-coalesce-8.test failed! Response body "" did not match expected "Hello Pod!"
+	router_test.go:1427: Unable to verify response for "www.example-coalesce-9.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1431: Route www.example-coalesce-9.test failed! Response body "" did not match expected "Hello Pod!"
+	router_test.go:1427: Unable to verify response for "www.example-coalesce-10.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1431: Route www.example-coalesce-10.test failed! Response body "" did not match expected "Hello Pod!"
+	router_test.go:1455: Unable to verify response for "www.example-coalesce-1.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1455: Unable to verify response for "www.example-coalesce-1.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1455: Unable to verify response for "www.example-coalesce-1.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1455: Unable to verify response for "www.example-coalesce-1.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1455: Unable to verify response for "www.example-coalesce-1.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1455: Unable to verify response for "www.example-coalesce-1.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1455: Unable to verify response for "www.example-coalesce-1.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1455: Unable to verify response for "www.example-coalesce-1.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1455: Unable to verify response for "www.example-coalesce-1.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1455: Unable to verify response for "www.example-coalesce-1.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1455: Unable to verify response for "www.example-coalesce-1.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1455: Unable to verify response for "www.example-coalesce-1.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1455: Unable to verify response for "www.example-coalesce-1.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1455: Unable to verify response for "www.example-coalesce-1.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1470: Unable to verify route deletion for "www.example-coalesce-1.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1478: Unable to verify route deletion for "www.example-coalesce-1.test": 
+	router_test.go:1470: Unable to verify route deletion for "www.example-coalesce-2.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1478: Unable to verify route deletion for "www.example-coalesce-2.test": 
+	router_test.go:1470: Unable to verify route deletion for "www.example-coalesce-3.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1478: Unable to verify route deletion for "www.example-coalesce-3.test": 
+	router_test.go:1470: Unable to verify route deletion for "www.example-coalesce-4.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1478: Unable to verify route deletion for "www.example-coalesce-4.test": 
+	router_test.go:1470: Unable to verify route deletion for "www.example-coalesce-5.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1478: Unable to verify route deletion for "www.example-coalesce-5.test": 
+	router_test.go:1470: Unable to verify route deletion for "www.example-coalesce-6.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1478: Unable to verify route deletion for "www.example-coalesce-6.test": 
+	router_test.go:1470: Unable to verify route deletion for "www.example-coalesce-7.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1478: Unable to verify route deletion for "www.example-coalesce-7.test": 
+	router_test.go:1470: Unable to verify route deletion for "www.example-coalesce-8.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1478: Unable to verify route deletion for "www.example-coalesce-8.test": 
+	router_test.go:1470: Unable to verify route deletion for "www.example-coalesce-9.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1478: Unable to verify route deletion for "www.example-coalesce-9.test": 
+	router_test.go:1470: Unable to verify route deletion for "www.example-coalesce-10.test": Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+	router_test.go:1478: Unable to verify route deletion for "www.example-coalesce-10.test": 
+FAIL
+[INFO] Dumping etcd contents to /tmp/openshift/test-integration//artifacts/TestRouterReloadCoalesce-etcd_dump.json
+
+Running TestRouterServiceUnavailable...
+failed  TestRouterServiceUnavailable
+I0314 13:04:11.324437   32694 plugins.go:46] Registered cloud provider "aws"
+I0314 13:04:11.324646   32694 plugins.go:46] Registered cloud provider "gce"
+I0314 13:04:11.324844   32694 plugins.go:46] Registered cloud provider "mesos"
+I0314 13:04:11.324900   32694 plugins.go:46] Registered cloud provider "openstack"
+I0314 13:04:11.324910   32694 plugins.go:46] Registered cloud provider "ovirt"
+I0314 13:04:11.324923   32694 plugins.go:46] Registered cloud provider "rackspace"
+I0314 13:04:11.326103   32694 plugins.go:62] Registered admission plugin "ServiceAccount"
+I0314 13:04:11.326134   32694 plugins.go:41] Registered credential provider "google-jwt-key"
+I0314 13:04:11.326143   32694 plugins.go:41] Registered credential provider "google-dockercfg"
+I0314 13:04:11.326152   32694 plugins.go:41] Registered credential provider "google-dockercfg-url"
+I0314 13:04:11.326160   32694 plugins.go:41] Registered credential provider "google-container-registry"
+I0314 13:04:11.332142   32694 plugins.go:62] Registered admission plugin "BuildDefaults"
+I0314 13:04:11.332157   32694 plugins.go:62] Registered admission plugin "BuildOverrides"
+I0314 13:04:11.332164   32694 plugins.go:62] Registered admission plugin "BuildByStrategy"
+I0314 13:04:11.332175   32694 plugins.go:62] Registered admission plugin "OriginNamespaceLifecycle"
+I0314 13:04:11.332184   32694 plugins.go:62] Registered admission plugin "OriginPodNodeEnvironment"
+I0314 13:04:11.332194   32694 plugins.go:62] Registered admission plugin "ProjectRequestLimit"
+I0314 13:04:11.332206   32694 plugins.go:62] Registered admission plugin "LimitRanger"
+I0314 13:04:11.332215   32694 plugins.go:62] Registered admission plugin "ClusterResourceOverride"
+I0314 13:04:11.332227   32694 plugins.go:62] Registered admission plugin "RunOnceDuration"
+I0314 13:04:11.332242   32694 plugins.go:62] Registered admission plugin "SecurityContextConstraint"
+I0314 13:04:11.332250   32694 plugins.go:62] Registered admission plugin "SCCExecRestrictions"
+I0314 13:04:11.332259   32694 plugins.go:62] Registered admission plugin "AlwaysAdmit"
+I0314 13:04:11.332267   32694 plugins.go:62] Registered admission plugin "AlwaysPullImages"
+I0314 13:04:11.332277   32694 plugins.go:62] Registered admission plugin "DenyEscalatingExec"
+I0314 13:04:11.332285   32694 plugins.go:62] Registered admission plugin "DenyExecOnPrivileged"
+I0314 13:04:11.332291   32694 plugins.go:62] Registered admission plugin "NamespaceExists"
+I0314 13:04:11.332300   32694 plugins.go:62] Registered admission plugin "NamespaceLifecycle"
+I0314 13:04:11.332315   32694 plugins.go:62] Registered admission plugin "ResourceQuota"
+I0314 13:04:11.332320   32694 plugins.go:62] Registered admission plugin "AlwaysDeny"
+I0314 13:04:11.332343   32694 plugins.go:62] Registered admission plugin "InitialResources"
+I0314 13:04:11.332353   32694 plugins.go:62] Registered admission plugin "NamespaceAutoProvision"
+I0314 13:04:11.332357   32694 plugins.go:62] Registered admission plugin "PersistentVolumeLabel"
+I0314 13:04:11.332362   32694 plugins.go:62] Registered admission plugin "SecurityContextDeny"
+Started, serving at 9.26.176.96:8080
+Started, serving at 9.26.176.96:8888
+Started, serving at 9.26.176.96:8889
+Started, serving TLS at 9.26.176.96:8443
+Stopping listener at 9.26.176.96:8080
+Stopping listener at 9.26.176.96:8888
+Stopping listener at 9.26.176.96:8889
+Stopping listener at 9.26.176.96:8443
+--- FAIL: TestRouterServiceUnavailable (50.53s)
+	router_test.go:946: Error dispatching http request : Get http://0.0.0.0: dial tcp 0.0.0.0:80: getsockopt: connection refused
+Server message: accept tcp 9.26.176.96:8888: use of closed network connectionStopping listener at 9.26.176.96:8080
+Server message: accept tcp 9.26.176.96:8080: use of closed network connectionStopping listener at 9.26.176.96:8888
+Stopping listener at 9.26.176.96:8889
+Stopping listener at 9.26.176.96:8080
+Stopping listener at 9.26.176.96:8443
+Stopping listener at 9.26.176.96:8888
+Stopping listener at 9.26.176.96:8889
+Stopping listener at 9.26.176.96:8443
+Server message: accept tcp 9.26.176.96:8889: use of closed network connectionStopping listener at 9.26.176.96:8080
+Server message: accept tcp 9.26.176.96:8443: use of closed network connectionStopping listener at 9.26.176.96:8888
+Stopping listener at 9.26.176.96:8889
+Stopping listener at 9.26.176.96:8443
+FAIL
+[INFO] Dumping etcd contents to /tmp/openshift/test-integration//artifacts/TestRouterServiceUnavailable-etcd_dump.json
+
+Running TestRouterStatsPort...
+failed  TestRouterStatsPort
+I0314 13:05:02.038946   32794 plugins.go:46] Registered cloud provider "aws"
+I0314 13:05:02.039164   32794 plugins.go:46] Registered cloud provider "gce"
+I0314 13:05:02.039382   32794 plugins.go:46] Registered cloud provider "mesos"
+I0314 13:05:02.039430   32794 plugins.go:46] Registered cloud provider "openstack"
+I0314 13:05:02.039441   32794 plugins.go:46] Registered cloud provider "ovirt"
+I0314 13:05:02.039449   32794 plugins.go:46] Registered cloud provider "rackspace"
+I0314 13:05:02.040673   32794 plugins.go:62] Registered admission plugin "ServiceAccount"
+I0314 13:05:02.040704   32794 plugins.go:41] Registered credential provider "google-jwt-key"
+I0314 13:05:02.040715   32794 plugins.go:41] Registered credential provider "google-dockercfg"
+I0314 13:05:02.040723   32794 plugins.go:41] Registered credential provider "google-dockercfg-url"
+I0314 13:05:02.040731   32794 plugins.go:41] Registered credential provider "google-container-registry"
+I0314 13:05:02.065323   32794 plugins.go:62] Registered admission plugin "BuildDefaults"
+I0314 13:05:02.065336   32794 plugins.go:62] Registered admission plugin "BuildOverrides"
+I0314 13:05:02.065343   32794 plugins.go:62] Registered admission plugin "BuildByStrategy"
+I0314 13:05:02.065352   32794 plugins.go:62] Registered admission plugin "OriginNamespaceLifecycle"
+I0314 13:05:02.065357   32794 plugins.go:62] Registered admission plugin "OriginPodNodeEnvironment"
+I0314 13:05:02.065363   32794 plugins.go:62] Registered admission plugin "ProjectRequestLimit"
+I0314 13:05:02.065371   32794 plugins.go:62] Registered admission plugin "LimitRanger"
+I0314 13:05:02.065375   32794 plugins.go:62] Registered admission plugin "ClusterResourceOverride"
+I0314 13:05:02.065382   32794 plugins.go:62] Registered admission plugin "RunOnceDuration"
+I0314 13:05:02.065393   32794 plugins.go:62] Registered admission plugin "SecurityContextConstraint"
+I0314 13:05:02.065398   32794 plugins.go:62] Registered admission plugin "SCCExecRestrictions"
+I0314 13:05:02.065402   32794 plugins.go:62] Registered admission plugin "AlwaysAdmit"
+I0314 13:05:02.065406   32794 plugins.go:62] Registered admission plugin "AlwaysPullImages"
+I0314 13:05:02.065413   32794 plugins.go:62] Registered admission plugin "DenyEscalatingExec"
+I0314 13:05:02.065416   32794 plugins.go:62] Registered admission plugin "DenyExecOnPrivileged"
+I0314 13:05:02.065421   32794 plugins.go:62] Registered admission plugin "NamespaceExists"
+I0314 13:05:02.065427   32794 plugins.go:62] Registered admission plugin "NamespaceLifecycle"
+I0314 13:05:02.065435   32794 plugins.go:62] Registered admission plugin "ResourceQuota"
+I0314 13:05:02.065440   32794 plugins.go:62] Registered admission plugin "AlwaysDeny"
+I0314 13:05:02.065463   32794 plugins.go:62] Registered admission plugin "InitialResources"
+I0314 13:05:02.065469   32794 plugins.go:62] Registered admission plugin "NamespaceAutoProvision"
+I0314 13:05:02.065474   32794 plugins.go:62] Registered admission plugin "PersistentVolumeLabel"
+I0314 13:05:02.065479   32794 plugins.go:62] Registered admission plugin "SecurityContextDeny"
+Started, serving at 9.26.176.96:8080
+Started, serving at 9.26.176.96:8888
+Started, serving at 9.26.176.96:8889
+Started, serving TLS at 9.26.176.96:8443
+Stopping listener at 9.26.176.96:8080
+Stopping listener at 9.26.176.96:8888
+Stopping listener at 9.26.176.96:8889
+Stopping listener at 9.26.176.96:8443
+--- FAIL: TestRouterStatsPort (53.27s)
+	router_test.go:1102: error: Get http://127.0.0.1:1936: dial tcp 127.0.0.1:1936: getsockopt: connection refused, attempt #1, retrying ...
+	router_test.go:1102: error: Get http://127.0.0.1:1936: dial tcp 127.0.0.1:1936: getsockopt: connection refused, attempt #2, retrying ...
+	router_test.go:824: Unable to verify response: Get http://127.0.0.1:1936: dial tcp 127.0.0.1:1936: getsockopt: connection refused
+	router_test.go:828: TestRouterStatsPort failed! No Response body.
+FAIL
+[INFO] Dumping etcd contents to /tmp/openshift/test-integration//artifacts/TestRouterStatsPort-etcd_dump.json
+
+Running TestRunOnceDurationAdmissionPlugin...
+ok      TestRunOnceDurationAdmissionPlugin
+Running TestRunOnceDurationAdmissionPluginProjectOverride...
+ok      TestRunOnceDurationAdmissionPluginProjectOverride
+Running TestSNI...
+ok      TestSNI
+Running TestSelfSubjectAccessReviewsNonExistingNamespace...
+ok      TestSelfSubjectAccessReviewsNonExistingNamespace
+Running TestServiceAccountAuthorization...
+ok      TestServiceAccountAuthorization
+Running TestSimpleImageChangeBuildTriggerFromImageStreamTagCustom...
+ok      TestSimpleImageChangeBuildTriggerFromImageStreamTagCustom
+Running TestSimpleImageChangeBuildTriggerFromImageStreamTagCustomWithConfigChange...
+ok      TestSimpleImageChangeBuildTriggerFromImageStreamTagCustomWithConfigChange
+Running TestSimpleImageChangeBuildTriggerFromImageStreamTagDocker...
+ok      TestSimpleImageChangeBuildTriggerFromImageStreamTagDocker
+Running TestSimpleImageChangeBuildTriggerFromImageStreamTagDockerWithConfigChange...
+ok      TestSimpleImageChangeBuildTriggerFromImageStreamTagDockerWithConfigChange
+Running TestSimpleImageChangeBuildTriggerFromImageStreamTagSTI...
+ok      TestSimpleImageChangeBuildTriggerFromImageStreamTagSTI
+Running TestSimpleImageChangeBuildTriggerFromImageStreamTagSTIWithConfigChange...
+ok      TestSimpleImageChangeBuildTriggerFromImageStreamTagSTIWithConfigChange
+Running TestTemplate...
+ok      TestTemplate
+Running TestTemplateTransformationFromConfig...
+ok      TestTemplateTransformationFromConfig
+Running TestTriggers_configChange...
+ok      TestTriggers_configChange
+Running TestTriggers_imageChange...
+ok      TestTriggers_imageChange
+Running TestTriggers_manual...
+ok      TestTriggers_manual
+Running TestUnprivilegedNewProject...
+ok      TestUnprivilegedNewProject
+Running TestUnprivilegedNewProjectDenied...
+ok      TestUnprivilegedNewProjectDenied
+Running TestUnprivilegedNewProjectFromTemplate...
+ok      TestUnprivilegedNewProjectFromTemplate
+Running TestUserInitialization...
+ok      TestUserInitialization
+Running TestV2RegistryGetTags...
+ok      TestV2RegistryGetTags
+Running TestWebConsoleExtensions...
+ok      TestWebConsoleExtensions
+Running TestWebhookGitHubPing...
+ok      TestWebhookGitHubPing
+Running TestWebhookGitHubPushWithImage...
+ok      TestWebhookGitHubPushWithImage
+Running TestWebhookGitHubPushWithImageStream...
+ok      TestWebhookGitHubPushWithImageStream
+hack/test-integration.sh took 1277 seconds
+[INFO] Stacked plot for log subset "iops" written to /tmp/openshift/test-integration//logs/iops.pdf
+[INFO] Stacked plot for log subset "paging" written to /tmp/openshift/test-integration//logs/paging.pdf
+[INFO] Stacked plot for log subset "cpu" written to /tmp/openshift/test-integration//logs/cpu.pdf
+[INFO] Stacked plot for log subset "queue" written to /tmp/openshift/test-integration//logs/queue.pdf
+[INFO] Stacked plot for log subset "memory" written to /tmp/openshift/test-integration//logs/memory.pdf
+[INFO] Dumping container logs to /tmp/openshift/test-integration//logs
+[INFO] Dumping all resources to /tmp/openshift/test-integration//logs/export_all.json
+[INFO] Dumping etcd contents to /tmp/openshift/test-integration//artifacts/etcd_dump.json
+
+[INFO] Tearing down test
+[INFO] Stopping k8s docker containers
+[INFO] Removing k8s docker containers
+[INFO] Cleanup complete
+Complete
