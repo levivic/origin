@@ -39,9 +39,11 @@ defaults
   timeout tunnel 1h
 
 {{ if (gt .StatsPort 0) }}
-listen stats :{{.StatsPort}}
+listen stats
+    bind :{{.StatsPort}}
 {{ else }}
-listen stats :1936
+listen stats
+    bind :1936
 {{ end }}
     mode http
     # Health check monitoring uri.

@@ -1,4 +1,3 @@
-#
 # This is the HAProxy router for OpenShift Origin.
 #
 # The standard name for this image is openshift/origin-haproxy-router
@@ -17,7 +16,7 @@ ADD bin/openshift /usr/bin/openshift
 #
 RUN ln -s /usr/bin/openshift /usr/bin/openshift-router && \
     chmod -R 777 /var && \
-    setcap 'cap_net_bind_service=ep' /usr/sbin/haproxy
+    setcap 'cap_net_bind_service=ep' /usr/local/sbin/haproxy
 WORKDIR /var/lib/haproxy/conf
 
 EXPOSE 80
