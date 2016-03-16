@@ -69,7 +69,8 @@ func TestDelNode(t *testing.T) {
 	evictor.Add("third")
 		
 	fmt.Println(evictor.queue.queue)
-	
+	fmt.Println(evictor.queue)
+		
 	evictor.Remove("first")
 
 	fmt.Println(evictor.queue.queue)

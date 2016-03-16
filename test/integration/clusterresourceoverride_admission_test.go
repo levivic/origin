@@ -4,6 +4,7 @@ package integration
 
 import (
 	"testing"
+	"time"
 
 	"github.com/openshift/origin/pkg/cmd/server/api"
 	"github.com/openshift/origin/pkg/cmd/server/bootstrappolicy"
@@ -27,6 +28,8 @@ func TestClusterResourceOverridePlugin(t *testing.T) {
 	kubeClient := setupClusterResourceOverrideTest(t, config)
 	podHandler := kubeClient.Pods(testutil.Namespace())
 	limitHandler := kubeClient.LimitRanges(testutil.Namespace())
+
+	time.Sleep(3*time.Minute)
 
 	// test with no limits object present
 

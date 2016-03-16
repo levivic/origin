@@ -4,6 +4,7 @@ package integration
 
 import (
 	"testing"
+	"time"
 
 	kapi "k8s.io/kubernetes/pkg/api"
 	kclient "k8s.io/kubernetes/pkg/client/unversioned"
@@ -35,6 +36,7 @@ func TestRunOnceDurationAdmissionPlugin(t *testing.T) {
 		ActiveDeadlineSecondsOverride: &secs,
 		Enabled: true,
 	}
+	time.Sleep(3*time.Minute)
 	kclient := setupRunOnceDurationTest(t, config, nil)
 	pod, err := kclient.Pods(testutil.Namespace()).Create(testRunOnceDurationPod())
 	if err != nil {
@@ -54,6 +56,7 @@ func TestRunOnceDurationAdmissionPluginProjectOverride(t *testing.T) {
 	nsAnnotations := map[string]string{
 		pluginapi.ActiveDeadlineSecondsOverrideAnnotation: "100",
 	}
+	time.Sleep(2*time.Minute)
 	kclient := setupRunOnceDurationTest(t, config, nsAnnotations)
 	pod, err := kclient.Pods(testutil.Namespace()).Create(testRunOnceDurationPod())
 	if err != nil {
