@@ -1381,6 +1381,7 @@ func TestRouterReloadCoalesce(t *testing.T) {
 	}
 
 	routeAddress := getRouteAddress()
+	fmt.Println(routeAddress)
 
 	//  Wait for the router to come up + reload interval to elapse.
 	time.Sleep(time.Second * 10)
@@ -1448,7 +1449,7 @@ func TestRouterReloadCoalesce(t *testing.T) {
 	for i := 0; i < ttl; i++ {
 		// Wait for router to pick up configs.
 		time.Sleep(time.Second * tcWaitSeconds)
-
+		
 		// Now verify the route with an HTTP client.
 		resp, err := getRoute(routeAddress, routeAlias, "http", nil, tr.HelloPod)
 		if err != nil {
